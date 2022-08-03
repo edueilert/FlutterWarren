@@ -11,10 +11,11 @@ class MyApp extends StatelessWidget {
   }
 }
 
-bool selected = true;
-double valorETH = 56.00;
-double valorBTC = 10.32;
-double valorLTC = 8.15;
+var long2 = double.parse('- - -');
+bool selected = false;
+double valorETH = 0;
+double valorBTC = 0;
+double valorLTC = 0;
 double valorCarteira = valorETH + valorBTC + valorLTC;
 
 class MyHomePage2 extends StatefulWidget {
@@ -24,12 +25,12 @@ class MyHomePage2 extends StatefulWidget {
   State<MyHomePage2> createState() => MyHomePage();
 }
 
-ocultar() {
+ocultar({double ETH = 37.58, double BTC = 56.37, double LTC = 47.40}) {
   if (selected == true) {
-    valorCarteira = valorCarteira;
-    valorBTC = valorBTC;
-    valorETH = valorETH;
-    valorLTC = valorLTC;
+    valorETH = ETH;
+    valorBTC = BTC;
+    valorLTC = LTC;
+    valorCarteira = ETH + BTC + LTC;
   } else {
     valorCarteira = 0;
     valorBTC = 0;
@@ -60,11 +61,13 @@ class MyHomePage extends State<MyHomePage2> {
                 width: 170,
               ),
               IconButton(
-                icon: Icon(selected ? Icons.remove_red_eye : Icons.visibility_off),
+                icon: Icon(
+                    selected ? Icons.remove_red_eye : Icons.visibility_off),
                 onPressed: () {
                   setState(() {
-                    ocultar();
                     selected = !selected;
+                    print(selected);
+                    ocultar();
                   });
                 },
               ),
