@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -11,11 +13,14 @@ class MyApp extends StatelessWidget {
   }
 }
 
-var long2 = double.parse('- - -');
 bool selected = false;
 double valorETH = 0;
 double valorBTC = 0;
 double valorLTC = 0;
+double CDI = 0;
+double variacaoETH = 0;
+double variacaoBTC = 0;
+double variacaoLTC = 0;
 double valorCarteira = valorETH + valorBTC + valorLTC;
 
 class MyHomePage2 extends StatefulWidget {
@@ -25,17 +30,32 @@ class MyHomePage2 extends StatefulWidget {
   State<MyHomePage2> createState() => MyHomePage();
 }
 
-ocultar({double ETH = 37.58, double BTC = 56.37, double LTC = 47.40}) {
+ocultar(
+    {double ETH = 37.58,
+    double BTC = 56.37,
+    double LTC = 47.40,
+    double vETH = 75,
+    double vBTC = 75,
+    double vLTC = 0.7,
+    double sCDI = 100}) {
   if (selected == true) {
     valorETH = ETH;
     valorBTC = BTC;
     valorLTC = LTC;
+    CDI = sCDI;
     valorCarteira = ETH + BTC + LTC;
+    variacaoETH = vETH;
+    variacaoBTC = vBTC;
+    variacaoLTC = vLTC;
   } else {
     valorCarteira = 0;
     valorBTC = 0;
     valorETH = 0;
     valorLTC = 0;
+    variacaoETH = 0;
+    variacaoBTC = 0;
+    variacaoLTC = 0;
+    CDI = 0;
   }
 }
 
@@ -66,7 +86,6 @@ class MyHomePage extends State<MyHomePage2> {
                 onPressed: () {
                   setState(() {
                     selected = !selected;
-                    print(selected);
                     ocultar();
                   });
                 },
@@ -76,35 +95,59 @@ class MyHomePage extends State<MyHomePage2> {
           Align(
               alignment: Alignment.bottomLeft,
               child: Text(
-                ' US\$: ' + valorCarteira.toString(),
+                ' R\$: ' + valorCarteira.toString(),
                 style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
               )),
           Align(
               alignment: Alignment.bottomLeft,
               child: Text(
-                ' +R\$ 100,00 (100% do CDI)',
+                ' +R\$ ' + CDI.toString() + '(100% do CDI)',
                 style: TextStyle(fontSize: 18),
               )),
           ListTile(
             title: Text('ETH'),
             isThreeLine: true,
             subtitle: Text('Etherum'),
-            leading: Icon(Icons.trending_down),
-            trailing: Text('US\$' + valorETH.toString()),
+            leading: Icon(Icons.trending_up),
+            trailing: Column(
+              children: [
+                Text('R\$' + valorETH.toString()),
+                Text("+" + variacaoETH.toString() + "%",
+                    style: TextStyle(
+                      backgroundColor: Color.fromARGB(255, 143, 250, 196),
+                    )),
+              ],
+            ),
           ),
           ListTile(
             title: Text('BTC'),
             isThreeLine: true,
             subtitle: Text('Bitcoin'),
-            leading: Icon(Icons.trending_down),
-            trailing: Text('US\$' + valorBTC.toString()),
+            leading: Icon(Icons.trending_up),
+            trailing: Column(
+              children: [
+                Text('R\$' + valorBTC.toString()),
+                Text("+" + variacaoBTC.toString() + "%",
+                    style: TextStyle(
+                      backgroundColor: Color.fromARGB(255, 143, 250, 196),
+                    )),
+              ],
+            ),
           ),
           ListTile(
             title: Text('LTC'),
             isThreeLine: true,
             subtitle: Text('Litecoin'),
-            leading: Icon(Icons.trending_up),
-            trailing: Text('US\$' + valorLTC.toString()),
+            leading: Icon(Icons.trending_down),
+            trailing: Column(
+              children: [
+                Text('R\$' + valorLTC.toString()),
+                Text("-" + variacaoLTC.toString() + "%",
+                    style: TextStyle(
+                      backgroundColor: Color.fromARGB(255, 255, 163, 163),
+                    )),
+              ],
+            ),
           ),
         ],
       ),
