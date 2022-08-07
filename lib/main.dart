@@ -17,10 +17,10 @@ bool selected = false;
 double valorETH = 0;
 double valorBTC = 0;
 double valorLTC = 0;
-double CDI = 0;
 double variacaoETH = 0;
 double variacaoBTC = 0;
 double variacaoLTC = 0;
+double valorCDI = 0;
 double valorCarteira = valorETH + valorBTC + valorLTC;
 
 class MyHomePage2 extends StatefulWidget {
@@ -37,12 +37,13 @@ ocultar(
     double vETH = 75,
     double vBTC = 75,
     double vLTC = 0.7,
-    double sCDI = 100}) {
+    var CDI = double.parse}) {
   if (selected == true) {
     valorETH = ETH;
     valorBTC = BTC;
     valorLTC = LTC;
-    CDI = sCDI;
+    valorCDI = (BTC + ETH + LTC) / 200;
+    CDI = valorCDI.toStringAsFixed(2);
     valorCarteira = ETH + BTC + LTC;
     variacaoETH = vETH;
     variacaoBTC = vBTC;
@@ -55,7 +56,7 @@ ocultar(
     variacaoETH = 0;
     variacaoBTC = 0;
     variacaoLTC = 0;
-    CDI = 0;
+    valorCDI = 0;
   }
 }
 
@@ -101,7 +102,7 @@ class MyHomePage extends State<MyHomePage2> {
           Align(
               alignment: Alignment.bottomLeft,
               child: Text(
-                ' +R\$ ' + CDI.toString() + '(100% do CDI)',
+                ' +R\$ ' + valorCDI.toStringAsFixed(2) + '(100% do CDI)',
                 style: TextStyle(fontSize: 18),
               )),
           ListTile(
