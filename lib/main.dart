@@ -96,7 +96,7 @@ class MyHomePage extends State<MyHomePage2> {
           Align(
               alignment: Alignment.bottomLeft,
               child: Text(
-                ' R\$: ' + valorCarteira.toString(),
+                ' R\$: ' + valorCarteira.toStringAsFixed(2),
                 style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
               )),
           Align(
@@ -112,7 +112,7 @@ class MyHomePage extends State<MyHomePage2> {
             leading: Icon(Icons.trending_up),
             trailing: Column(
               children: [
-                Text('R\$' + valorETH.toString()),
+                Text('R\$' + valorETH.toStringAsFixed(2)),
                 Text("+" + variacaoETH.toString() + "%",
                     style: TextStyle(
                       backgroundColor: Color.fromARGB(255, 143, 250, 196),
@@ -127,7 +127,7 @@ class MyHomePage extends State<MyHomePage2> {
             leading: Icon(Icons.trending_up),
             trailing: Column(
               children: [
-                Text('R\$' + valorBTC.toString()),
+                Text('R\$' + valorBTC.toStringAsFixed(2)),
                 Text("+" + variacaoBTC.toString() + "%",
                     style: TextStyle(
                       backgroundColor: Color.fromARGB(255, 143, 250, 196),
@@ -142,7 +142,7 @@ class MyHomePage extends State<MyHomePage2> {
             leading: Icon(Icons.trending_down),
             trailing: Column(
               children: [
-                Text('R\$' + valorLTC.toString()),
+                Text('R\$' + valorLTC.toStringAsFixed(2)),
                 Text("-" + variacaoLTC.toString() + "%",
                     style: TextStyle(
                       backgroundColor: Color.fromARGB(255, 255, 163, 163),
@@ -169,38 +169,6 @@ class MyHomePage extends State<MyHomePage2> {
         ],
         selectedItemColor: Colors.pink,
       ),
-    );
-  }
-}
-
-class WidgetWithState extends StatefulWidget {
-  @override
-  _WidgetWithStateState createState() => _WidgetWithStateState();
-}
-
-class _WidgetWithStateState extends State<WidgetWithState> {
-  int counter = 0;
-
-  increment() {
-    setState(() {
-      counter++;
-    });
-  }
-
-  decrement() {
-    setState(() {
-      counter--;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        FlatButton(onPressed: increment, child: Text('Increment')),
-        FlatButton(onPressed: decrement, child: Text('Decrement')),
-        Text(counter.toString()),
-      ],
     );
   }
 }
