@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
 
 class Grafico extends StatefulWidget {
-  const Grafico({key});
+  const Grafico({Key? key}) : super(key: key);
 
   @override
-  State<Grafico> createState() => grafico();
+  State<Grafico> createState() => Grafico2();
 }
 
-class grafico extends State<Grafico> {
+class Grafico2 extends State<Grafico> {
   @override
   Widget build(BuildContext context) {
-    return Text('chegou');
+    return const Text('chegou');
   }
 }
