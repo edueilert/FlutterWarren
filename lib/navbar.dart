@@ -11,10 +11,10 @@ class NavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: _title,
-      home: MyStatefulWidget(),
+      home: const MyStatefulWidget(),
       initialRoute: "/",
       routes: {
-        '/grafico': (context) => Grafico(),
+        '/grafico': (context) => const Grafico(),
       },
     );
   }
@@ -32,13 +32,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    MyHomePage2(),
+    MyHomePageWidget(),
     Text(
-      'Index 1: Business',
+      'Index 1: Carteiras',
       style: optionStyle,
     ),
     Text(
-      'Index 2: School',
+      'Index 2: Movimentações ',
       style: optionStyle,
     ),
   ];
@@ -62,16 +62,16 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
+            icon: Icon(Icons.monetization_on_outlined),
+            label: 'Carteiras',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
+            icon: Icon(Icons.equalizer_outlined),
+            label: 'Movimentações',
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Color.fromARGB(255, 236, 116, 116),
+        selectedItemColor: Colors.pink,
         onTap: _onItemTapped,
       ),
     );

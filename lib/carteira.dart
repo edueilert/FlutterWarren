@@ -1,71 +1,38 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:myapp/grafico.dart';
 
-bool selected = false;
-double valorETH = 0;
-double valorBTC = 0;
-double valorLTC = 0;
-double variacaoETH = 0;
-double variacaoBTC = 0;
-double variacaoLTC = 0;
-double valorCDI = 0;
-double valorCarteira = valorETH + valorBTC + valorLTC;
-
-class MyHomePage2 extends StatefulWidget {
-  const MyHomePage2({key});
+class MyHomePageWidget extends StatefulWidget {
+  const MyHomePageWidget({Key? key}) : super(key: key);
 
   @override
-  State<MyHomePage2> createState() => MyHomePage();
+  State<MyHomePageWidget> createState() => MyHomePageState();
 }
 
-ocultar(
-    {double ETH = 37.58,
-    double BTC = 56.37,
-    double LTC = 47.40,
-    double vETH = 75,
-    double vBTC = 75,
-    double vLTC = 0.7,
-    var CDI = double.parse}) {
-  if (selected == true) {
-    valorETH = ETH;
-    valorBTC = BTC;
-    valorLTC = LTC;
-    valorCDI = (BTC + ETH + LTC) / 200;
-    CDI = valorCDI.toStringAsFixed(2);
-    valorCarteira = ETH + BTC + LTC;
-    variacaoETH = vETH;
-    variacaoBTC = vBTC;
-    variacaoLTC = vLTC;
-  } else {
-    valorCarteira = 0;
-    valorBTC = 0;
-    valorETH = 0;
-    valorLTC = 0;
-    variacaoETH = 0;
-    variacaoBTC = 0;
-    variacaoLTC = 0;
-    valorCDI = 0;
-  }
-}
+class MyHomePageState extends State<MyHomePageWidget> {
+  bool selected = true;
+  double eth = 37.58;
+  double btc = 56.37;
+  double ltc = 47.40;
+  double vETH = 75;
+  double vBTC = 75;
+  double vLTC = 0.7;
+  var cdi = double.parse;
 
-class MyHomePage extends State<MyHomePage2> {
-  Widget column() {
+  Widget primeiraPagina() {
     return Column(
       children: <Widget>[
-        SizedBox(
+        const SizedBox(
           height: 30,
         ),
         Row(
           children: <Widget>[
-            Align(
+            const Align(
               alignment: Alignment.bottomLeft,
               child: Text(
                 ' Carteira',
                 style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 170,
             ),
             IconButton(
@@ -74,7 +41,6 @@ class MyHomePage extends State<MyHomePage2> {
               onPressed: () {
                 setState(() {
                   selected = !selected;
-                  ocultar();
                 });
               },
             ),
@@ -82,59 +48,129 @@ class MyHomePage extends State<MyHomePage2> {
         ),
         Align(
             alignment: Alignment.bottomLeft,
-            child: Text(
-              ' R\$: ' + valorCarteira.toString(),
-              style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
+            child: Row(
+              children: [
+                const Text(
+                  ' R\$: ',
+                  style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
+                ),
+                Visibility(
+                  child: Text(
+                    (eth + btc + ltc).toStringAsFixed(2),
+                    style: const TextStyle(
+                        fontSize: 35, fontWeight: FontWeight.bold),
+                  ),
+                  visible: selected,
+                ),
+              ],
             )),
         Align(
-            alignment: Alignment.bottomLeft,
-            child: Text(
-              ' +R\$ ' + valorCDI.toStringAsFixed(2) + '(100% do CDI)',
-              style: TextStyle(fontSize: 18),
-            )),
-        ListTile(
-          title: Text('ETH'),
-          isThreeLine: true,
-          subtitle: Text('Etherum'),
-          leading: Icon(Icons.trending_up),
-          trailing: Column(
+          alignment: Alignment.bottomLeft,
+          child: Row(
             children: [
-              Text('R\$' + valorETH.toString()),
-              Text("+" + variacaoETH.toString() + "%",
-                  style: TextStyle(
-                    backgroundColor: Color.fromARGB(255, 143, 250, 196),
-                  )),
+              const Text('   +R\$ '),
+              Visibility(
+                child: Text(
+                  (eth + ltc + btc / 200).toStringAsFixed(2),
+                  style: const TextStyle(fontSize: 18),
+                ),
+                visible: selected,
+              ),
+              const Text(' (100% de cdi)'),
             ],
           ),
         ),
         ListTile(
-          title: Text('BTC'),
+          title: const Text('eth'),
           isThreeLine: true,
-          subtitle: Text('Bitcoin'),
-          leading: Icon(Icons.trending_up),
-          trailing: Column(
-            children: [
-              Text('R\$' + valorBTC.toString()),
-              Text("+" + variacaoBTC.toString() + "%",
-                  style: TextStyle(
-                    backgroundColor: Color.fromARGB(255, 143, 250, 196),
-                  )),
-            ],
+          subtitle: const Text('Etherum'),
+          leading: const Icon(Icons.trending_up),
+          trailing: SizedBox(
+            width: 79,
+            child: Column(
+              children: [
+                Row(children: [
+                  const Text('R\$ '),
+                  Visibility(
+                    child: Text(
+                      eth.toStringAsFixed(2) + "%",
+                    ),
+                    visible: selected,
+                  ),
+                ]),
+                Visibility(
+                  child: Text(
+                    "+" + vETH.toString() + "%",
+                    style: const TextStyle(
+                      backgroundColor: Color.fromARGB(255, 143, 250, 196),
+                    ),
+                  ),
+                  visible: selected,
+                ),
+              ],
+            ),
           ),
         ),
         ListTile(
-          title: Text('LTC'),
+          title: const Text('btc'),
           isThreeLine: true,
-          subtitle: Text('Litecoin'),
-          leading: Icon(Icons.trending_down),
-          trailing: Column(
-            children: [
-              Text('R\$' + valorLTC.toString()),
-              Text("-" + variacaoLTC.toString() + "%",
-                  style: TextStyle(
-                    backgroundColor: Color.fromARGB(255, 255, 163, 163),
-                  )),
-            ],
+          subtitle: const Text('Bitcoin'),
+          leading: const Icon(Icons.trending_up),
+          trailing: SizedBox(
+            width: 79,
+            child: Column(
+              children: [
+                Row(children: [
+                  const Text('R\$ '),
+                  Visibility(
+                    child: Text(
+                      btc.toStringAsFixed(2) + "%",
+                    ),
+                    visible: selected,
+                  ),
+                ]),
+                Visibility(
+                  child: Text(
+                    "+" + vBTC.toString() + "%",
+                    style: const TextStyle(
+                      backgroundColor: Color.fromARGB(255, 143, 250, 196),
+                    ),
+                  ),
+                  visible: selected,
+                ),
+              ],
+            ),
+          ),
+        ),
+        ListTile(
+          title: const Text('ltc'),
+          isThreeLine: true,
+          subtitle: const Text('Litecoin'),
+          leading: const Icon(Icons.trending_down),
+          trailing: SizedBox(
+            width: 79,
+            child: Column(
+              children: [
+                Row(children: [
+                  const Text('R\$ '),
+                  Visibility(
+                    child: Text(
+                      ltc.toStringAsFixed(2) + "%",
+                    ),
+                    visible: selected,
+                  ),
+                ]),
+                Visibility(
+                  child: Text(
+                    "+" + vLTC.toString() + "%",
+                    style: const TextStyle(
+                      backgroundColor: Color.fromARGB(255, 250, 143, 143),
+                    ),
+                  ),
+                  visible: selected,
+                ),
+              ],
+            ),
           ),
         ),
       ],
@@ -144,7 +180,7 @@ class MyHomePage extends State<MyHomePage2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: column(),
+      body: primeiraPagina(),
     );
   }
 }
