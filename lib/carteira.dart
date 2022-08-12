@@ -81,7 +81,7 @@ class MyHomePageState extends State<MyHomePageWidget> {
           ),
         ),
         ListTile(
-          title: const Text('eth'),
+          title: const Text('ETH'),
           isThreeLine: true,
           subtitle: const Text('Etherum'),
           leading: const Icon(Icons.trending_up),
@@ -112,7 +112,7 @@ class MyHomePageState extends State<MyHomePageWidget> {
           ),
         ),
         ListTile(
-          title: const Text('btc'),
+          title: const Text('BTC'),
           isThreeLine: true,
           subtitle: const Text('Bitcoin'),
           leading: const Icon(Icons.trending_up),
@@ -143,7 +143,7 @@ class MyHomePageState extends State<MyHomePageWidget> {
           ),
         ),
         ListTile(
-          title: const Text('ltc'),
+          title: const Text('LTC'),
           isThreeLine: true,
           subtitle: const Text('Litecoin'),
           leading: const Icon(Icons.trending_down),
