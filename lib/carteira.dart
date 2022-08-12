@@ -8,7 +8,7 @@ class MyHomePageWidget extends StatefulWidget {
 }
 
 class MyHomePageState extends State<MyHomePageWidget> {
-  bool selected = true;
+  bool isVisible = true;
   double eth = 37.58;
   double btc = 56.37;
   double ltc = 47.40;
@@ -37,10 +37,10 @@ class MyHomePageState extends State<MyHomePageWidget> {
             ),
             IconButton(
               icon:
-                  Icon(selected ? Icons.remove_red_eye : Icons.visibility_off),
+                  Icon(isVisible ? Icons.remove_red_eye : Icons.visibility_off),
               onPressed: () {
                 setState(() {
-                  selected = !selected;
+                  isVisible = !isVisible;
                 });
               },
             ),
@@ -60,7 +60,7 @@ class MyHomePageState extends State<MyHomePageWidget> {
                     style: const TextStyle(
                         fontSize: 35, fontWeight: FontWeight.bold),
                   ),
-                  visible: selected,
+                  visible: isVisible,
                 ),
               ],
             )),
@@ -74,7 +74,7 @@ class MyHomePageState extends State<MyHomePageWidget> {
                   (eth + ltc + btc / 200).toStringAsFixed(2),
                   style: const TextStyle(fontSize: 18),
                 ),
-                visible: selected,
+                visible: isVisible,
               ),
               const Text(' (100% de cdi)'),
             ],
@@ -95,7 +95,7 @@ class MyHomePageState extends State<MyHomePageWidget> {
                     child: Text(
                       eth.toStringAsFixed(2) + "%",
                     ),
-                    visible: selected,
+                    visible: isVisible,
                   ),
                 ]),
                 Visibility(
@@ -105,7 +105,7 @@ class MyHomePageState extends State<MyHomePageWidget> {
                       backgroundColor: Color.fromARGB(255, 143, 250, 196),
                     ),
                   ),
-                  visible: selected,
+                  visible: isVisible,
                 ),
               ],
             ),
@@ -126,7 +126,7 @@ class MyHomePageState extends State<MyHomePageWidget> {
                     child: Text(
                       btc.toStringAsFixed(2) + "%",
                     ),
-                    visible: selected,
+                    visible: isVisible,
                   ),
                 ]),
                 Visibility(
@@ -136,7 +136,7 @@ class MyHomePageState extends State<MyHomePageWidget> {
                       backgroundColor: Color.fromARGB(255, 143, 250, 196),
                     ),
                   ),
-                  visible: selected,
+                  visible: isVisible,
                 ),
               ],
             ),
@@ -157,7 +157,7 @@ class MyHomePageState extends State<MyHomePageWidget> {
                     child: Text(
                       ltc.toStringAsFixed(2) + "%",
                     ),
-                    visible: selected,
+                    visible: isVisible,
                   ),
                 ]),
                 Visibility(
@@ -167,7 +167,7 @@ class MyHomePageState extends State<MyHomePageWidget> {
                       backgroundColor: Color.fromARGB(255, 250, 143, 143),
                     ),
                   ),
-                  visible: selected,
+                  visible: isVisible,
                 ),
               ],
             ),
