@@ -15,10 +15,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     MyHomePageWidget(),
-    Text(
-      'Index 1: Carteiras',
-      style: optionStyle,
-    ),
+    Grafico(),
     Text(
       'Index 2: Movimentações ',
       style: optionStyle,
