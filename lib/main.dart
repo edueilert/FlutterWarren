@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/grafico.dart';
+import 'package:myapp/coins/bitcoin.dart';
+import 'package:myapp/coins/ethereum.dart';
+import 'package:myapp/coins/litecoin.dart';
 import 'package:myapp/navbar.dart';
 
 void main() => runApp(const NavBar());
@@ -16,7 +18,9 @@ class NavBar extends StatelessWidget {
       home: const MyStatefulWidget(),
       initialRoute: "/",
       routes: {
-        '/grafico': (context) => const Grafico(),
+        '/ethereum': (context) => const Ethereum(),
+        '/bitcoin': (context) => const Bitcoin(),
+        '/litecoin': (context) => const Litecoin(),
       },
     );
   }

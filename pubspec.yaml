@@ -17,8 +17,11 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
+  draw_graph: ^1.0.0
   flutter:
     sdk: flutter
+  graphic: ^0.10.6
+  syncfusion_flutter_charts: ^20.2.43
 
 dev_dependencies:
   flutter_test:

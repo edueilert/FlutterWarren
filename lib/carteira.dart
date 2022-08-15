@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class MyHomePageWidget extends StatefulWidget {
-  const MyHomePageWidget({Key? key}) : super(key: key);
-
+  MyHomePageWidget({Key? key, required this.selectedCoin}) : super(key: key);
+  int selectedCoin;
   @override
   State<MyHomePageWidget> createState() => MyHomePageState();
 }
@@ -80,96 +81,111 @@ class MyHomePageState extends State<MyHomePageWidget> {
             ],
           ),
         ),
-        ListTile(
-          title: const Text('ETH'),
-          isThreeLine: true,
-          subtitle: const Text('Etherum'),
-          leading: const Icon(Icons.trending_up),
-          trailing: SizedBox(
-            width: 79,
-            child: Column(
-              children: [
-                Row(children: [
-                  const Text('R\$ '),
+        InkWell(
+          onTap: () {
+            Navigator.pushNamed(context, "/ethereum");
+          },
+          child: ListTile(
+            title: const Text('ETH'),
+            isThreeLine: true,
+            subtitle: const Text('Etherum'),
+            leading: const Icon(Icons.trending_up),
+            trailing: SizedBox(
+              width: 79,
+              child: Column(
+                children: [
+                  Row(children: [
+                    const Text('R\$ '),
+                    Visibility(
+                      child: Text(
+                        eth.toStringAsFixed(2) + "%",
+                      ),
+                      visible: isVisible,
+                    ),
+                  ]),
                   Visibility(
                     child: Text(
-                      eth.toStringAsFixed(2) + "%",
+                      "+" + vETH.toString() + "%",
+                      style: const TextStyle(
+                        backgroundColor: Color.fromARGB(255, 143, 250, 196),
+                      ),
                     ),
                     visible: isVisible,
                   ),
-                ]),
-                Visibility(
-                  child: Text(
-                    "+" + vETH.toString() + "%",
-                    style: const TextStyle(
-                      backgroundColor: Color.fromARGB(255, 143, 250, 196),
-                    ),
-                  ),
-                  visible: isVisible,
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
-        ListTile(
-          title: const Text('BTC'),
-          isThreeLine: true,
-          subtitle: const Text('Bitcoin'),
-          leading: const Icon(Icons.trending_up),
-          trailing: SizedBox(
-            width: 79,
-            child: Column(
-              children: [
-                Row(children: [
-                  const Text('R\$ '),
+        InkWell(
+          onTap: () {
+            Navigator.pushNamed(context, "/bitcoin");
+          },
+          child: ListTile(
+            title: const Text('BTC'),
+            isThreeLine: true,
+            subtitle: const Text('Bitcoin'),
+            leading: const Icon(Icons.trending_up),
+            trailing: SizedBox(
+              width: 79,
+              child: Column(
+                children: [
+                  Row(children: [
+                    const Text('R\$ '),
+                    Visibility(
+                      child: Text(
+                        btc.toStringAsFixed(2) + "%",
+                      ),
+                      visible: isVisible,
+                    ),
+                  ]),
                   Visibility(
                     child: Text(
-                      btc.toStringAsFixed(2) + "%",
+                      "+" + vBTC.toString() + "%",
+                      style: const TextStyle(
+                        backgroundColor: Color.fromARGB(255, 143, 250, 196),
+                      ),
                     ),
                     visible: isVisible,
                   ),
-                ]),
-                Visibility(
-                  child: Text(
-                    "+" + vBTC.toString() + "%",
-                    style: const TextStyle(
-                      backgroundColor: Color.fromARGB(255, 143, 250, 196),
-                    ),
-                  ),
-                  visible: isVisible,
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
-        ListTile(
-          title: const Text('LTC'),
-          isThreeLine: true,
-          subtitle: const Text('Litecoin'),
-          leading: const Icon(Icons.trending_down),
-          trailing: SizedBox(
-            width: 79,
-            child: Column(
-              children: [
-                Row(children: [
-                  const Text('R\$ '),
+        InkWell(
+          onTap: () {
+            Navigator.pushNamed(context, "/litecoin");
+          },
+          child: ListTile(
+            title: const Text('LTC'),
+            isThreeLine: true,
+            subtitle: const Text('Litecoin'),
+            leading: const Icon(Icons.trending_down),
+            trailing: SizedBox(
+              width: 79,
+              child: Column(
+                children: [
+                  Row(children: [
+                    const Text('R\$ '),
+                    Visibility(
+                      child: Text(
+                        ltc.toStringAsFixed(2) + "%",
+                      ),
+                      visible: isVisible,
+                    ),
+                  ]),
                   Visibility(
                     child: Text(
-                      ltc.toStringAsFixed(2) + "%",
+                      "+" + vLTC.toString() + "%",
+                      style: const TextStyle(
+                        backgroundColor: Color.fromARGB(255, 250, 143, 143),
+                      ),
                     ),
                     visible: isVisible,
                   ),
-                ]),
-                Visibility(
-                  child: Text(
-                    "+" + vLTC.toString() + "%",
-                    style: const TextStyle(
-                      backgroundColor: Color.fromARGB(255, 250, 143, 143),
-                    ),
-                  ),
-                  visible: isVisible,
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
