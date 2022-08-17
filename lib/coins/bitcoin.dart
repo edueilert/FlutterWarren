@@ -51,7 +51,7 @@ class ListagemCrypto extends State<Bitcoin> {
             ),
             LineGraph(
               features: features,
-              size: const Size(350, 250),
+              size: const Size(400, 200),
               labelX: const ['5D', '10D', '30D', '50D'],
               labelY: const [
                 '0,00R\$',
@@ -61,7 +61,7 @@ class ListagemCrypto extends State<Bitcoin> {
                 '1,00R\$',
                 '2,00R\$'
               ],
-              showDescription: true,
+              showDescription: false,
               graphColor: Colors.black87,
             ),
             const Align(
