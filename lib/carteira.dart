@@ -77,13 +77,13 @@ class MyHomePageState extends State<MyHomePageWidget> {
                 ),
                 visible: isVisible,
               ),
-              const Text(' (100% de cdi)'),
+              const Text(' (100% de CDI)'),
             ],
           ),
         ),
         InkWell(
           onTap: () {
-            Navigator.pushNamed(context, "/ethereum");
+            Navigator.pushNamed(context, "/ethereumMain");
           },
           child: ListTile(
             title: const Text('ETH'),
@@ -119,7 +119,7 @@ class MyHomePageState extends State<MyHomePageWidget> {
         ),
         InkWell(
           onTap: () {
-            Navigator.pushNamed(context, "/bitcoin");
+            Navigator.pushNamed(context, "/bitcoinMain");
           },
           child: ListTile(
             title: const Text('BTC'),
@@ -155,7 +155,7 @@ class MyHomePageState extends State<MyHomePageWidget> {
         ),
         InkWell(
           onTap: () {
-            Navigator.pushNamed(context, "/litecoin");
+            Navigator.pushNamed(context, "/litecoinMain");
           },
           child: ListTile(
             title: const Text('LTC'),
