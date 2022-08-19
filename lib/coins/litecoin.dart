@@ -12,11 +12,16 @@ class LitecoinMain extends StatefulWidget {
 }
 
 class L5d extends State<LitecoinMain> {
+  double valorAtual = 0.87;
+  double capMercado = 0.25;
+  double valorMin = 0.03;
+  double valorMax = 0.87;
+
   final List<Feature> features = [
     Feature(
       title: "Litecoin",
       color: Colors.pink,
-      data: [0.03, 0.40, 0.85, 1.20, 1],
+      data: [0.03, 0.80, 0.45, 0.36, 0.87],
     ),
   ];
 
@@ -61,7 +66,7 @@ class L5d extends State<LitecoinMain> {
                 '0,25R\$',
                 '0,50R\$',
                 '1,00R\$',
-                '2,00R\$'
+                '1,50R\$'
               ],
               showDescription: false,
               graphColor: Colors.black87,
@@ -158,22 +163,22 @@ class L5d extends State<LitecoinMain> {
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
             ),
-            const ListTile(
-              title: Text("Litecoin"),
-              subtitle: Text('Valor Atual'),
-              trailing: Text("R\$20.000"),
+            ListTile(
+              title: const Text("Litecoin"),
+              subtitle: const Text('Valor Atual'),
+              trailing: Text("R\$" + valorAtual.toString()),
             ),
-            const ListTile(
-              title: Text("Cap de mercado"),
-              trailing: Text("+0,2%"),
+            ListTile(
+              title: const Text("Cap de mercado"),
+              trailing: Text("+" + capMercado.toString() + "%"),
             ),
-            const ListTile(
-              title: Text("Valor mínimo"),
-              trailing: Text("R\$ 0,02"),
+            ListTile(
+              title: const Text("Valor mínimo"),
+              trailing: Text("R\$" + valorMin.toString()),
             ),
-            const ListTile(
-              title: Text("Valor máximo"),
-              trailing: Text("R\$ 0,47"),
+            ListTile(
+              title: const Text("Valor máximo"),
+              trailing: Text("R\$" + valorMax.toString()),
             ),
             ButtonTheme(
               minWidth: 350.0,
@@ -198,11 +203,16 @@ class Litecoin10d extends StatefulWidget {
 }
 
 class L10d extends State<Litecoin10d> {
+  double valorAtual = 0.9;
+  double capMercado = 0.58;
+  double valorMin = 0.36;
+  double valorMax = 0.70;
+
   final List<Feature> features = [
     Feature(
       title: "Litecoin",
       color: Colors.pink,
-      data: [0.30, 0.90, 0.80, 0.60, 0.45, 0.9],
+      data: [0.36, 0.70, 0.80, 0.60, 0.45, 0.70],
     ),
   ];
 
@@ -247,7 +257,7 @@ class L10d extends State<Litecoin10d> {
                 '0,25R\$',
                 '0,50R\$',
                 '1,00R\$',
-                '2,00R\$'
+                '1,50R\$'
               ],
               showDescription: false,
               graphColor: Colors.black87,
@@ -344,22 +354,22 @@ class L10d extends State<Litecoin10d> {
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
             ),
-            const ListTile(
-              title: Text("Litecoin"),
-              subtitle: Text('Valor Atual'),
-              trailing: Text("R\$20.000"),
+            ListTile(
+              title: const Text("Litecoin"),
+              subtitle: const Text('Valor Atual'),
+              trailing: Text("R\$" + valorAtual.toString()),
             ),
-            const ListTile(
-              title: Text("Cap de mercado"),
-              trailing: Text("+0,2%"),
+            ListTile(
+              title: const Text("Cap de mercado"),
+              trailing: Text("+" + capMercado.toString() + "%"),
             ),
-            const ListTile(
-              title: Text("Valor mínimo"),
-              trailing: Text("R\$ 0,02"),
+            ListTile(
+              title: const Text("Valor mínimo"),
+              trailing: Text("R\$" + valorMin.toString()),
             ),
-            const ListTile(
-              title: Text("Valor máximo"),
-              trailing: Text("R\$ 0,47"),
+            ListTile(
+              title: const Text("Valor máximo"),
+              trailing: Text("R\$" + valorMax.toString()),
             ),
             ButtonTheme(
               minWidth: 350.0,
@@ -384,11 +394,16 @@ class Litecoin15d extends StatefulWidget {
 }
 
 class L15d extends State<Litecoin15d> {
+  double valorAtual = 1.2;
+  double capMercado = 0.70;
+  double valorMin = 0.4;
+  double valorMax = 1.2;
+
   final List<Feature> features = [
     Feature(
       title: "Litecoin",
       color: Colors.pink,
-      data: [1, 0.7, 1.2, 0.8, 0.7, 0.6],
+      data: [1, 0.4, 1.2, 0.8, 0.7, 1.2],
     ),
   ];
 
@@ -433,7 +448,7 @@ class L15d extends State<Litecoin15d> {
                 '0,25R\$',
                 '0,50R\$',
                 '1,00R\$',
-                '2,00R\$'
+                '1,50R\$'
               ],
               showDescription: false,
               graphColor: Colors.black87,
@@ -530,22 +545,22 @@ class L15d extends State<Litecoin15d> {
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
             ),
-            const ListTile(
-              title: Text("Litecoin"),
-              subtitle: Text('Valor Atual'),
-              trailing: Text("R\$20.000"),
+            ListTile(
+              title: const Text("Litecoin"),
+              subtitle: const Text('Valor Atual'),
+              trailing: Text("R\$" + valorAtual.toString()),
             ),
-            const ListTile(
-              title: Text("Cap de mercado"),
-              trailing: Text("+0,2%"),
+            ListTile(
+              title: const Text("Cap de mercado"),
+              trailing: Text("+" + capMercado.toString() + "%"),
             ),
-            const ListTile(
-              title: Text("Valor mínimo"),
-              trailing: Text("R\$ 0,02"),
+            ListTile(
+              title: const Text("Valor mínimo"),
+              trailing: Text("R\$" + valorMin.toString()),
             ),
-            const ListTile(
-              title: Text("Valor máximo"),
-              trailing: Text("R\$ 0,47"),
+            ListTile(
+              title: const Text("Valor máximo"),
+              trailing: Text("R\$" + valorMax.toString()),
             ),
             ButtonTheme(
               minWidth: 350.0,
@@ -570,11 +585,16 @@ class Litecoin30d extends StatefulWidget {
 }
 
 class L30d extends State<Litecoin30d> {
+  double valorAtual = 0.86;
+  double capMercado = 0.38;
+  double valorMin = 0.5;
+  double valorMax = 1.1;
+
   final List<Feature> features = [
     Feature(
       title: "Litecoin",
       color: Colors.pink,
-      data: [0.7, 0.5, 0.8, 0.5, 1.1, 0.9],
+      data: [0.7, 0.5, 0.8, 0.5, 1.1, 0.86],
     ),
   ];
 
@@ -619,7 +639,7 @@ class L30d extends State<Litecoin30d> {
                 '0,25R\$',
                 '0,50R\$',
                 '1,00R\$',
-                '2,00R\$'
+                '1,50R\$'
               ],
               showDescription: false,
               graphColor: Colors.black87,
@@ -716,22 +736,22 @@ class L30d extends State<Litecoin30d> {
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
             ),
-            const ListTile(
-              title: Text("Litecoin"),
-              subtitle: Text('Valor Atual'),
-              trailing: Text("R\$20.000"),
+            ListTile(
+              title: const Text("Litecoin"),
+              subtitle: const Text('Valor Atual'),
+              trailing: Text("R\$" + valorAtual.toString()),
             ),
-            const ListTile(
-              title: Text("Cap de mercado"),
-              trailing: Text("+0,2%"),
+            ListTile(
+              title: const Text("Cap de mercado"),
+              trailing: Text("+" + capMercado.toString() + "%"),
             ),
-            const ListTile(
-              title: Text("Valor mínimo"),
-              trailing: Text("R\$ 0,02"),
+            ListTile(
+              title: const Text("Valor mínimo"),
+              trailing: Text("R\$" + valorMin.toString()),
             ),
-            const ListTile(
-              title: Text("Valor máximo"),
-              trailing: Text("R\$ 0,47"),
+            ListTile(
+              title: const Text("Valor máximo"),
+              trailing: Text("R\$" + valorMax.toString()),
             ),
             ButtonTheme(
               minWidth: 350.0,
@@ -756,11 +776,15 @@ class Litecoin50d extends StatefulWidget {
 }
 
 class L50d extends State<Litecoin50d> {
+  double valorAtual = 1;
+  double capMercado = 0.68;
+  double valorMin = 0.04;
+  double valorMax = 1;
   final List<Feature> features = [
     Feature(
       title: "Litecoin",
       color: Colors.pink,
-      data: [1, 0.9, 1.2, 0.7, 1.1, 1],
+      data: [0.04, 0.9, 0.8, 0.07, 1, 1],
     ),
   ];
 
@@ -805,7 +829,7 @@ class L50d extends State<Litecoin50d> {
                 '0,25R\$',
                 '0,50R\$',
                 '1,00R\$',
-                '2,00R\$'
+                '1,50R\$'
               ],
               showDescription: false,
               graphColor: Colors.black87,
@@ -902,22 +926,22 @@ class L50d extends State<Litecoin50d> {
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
             ),
-            const ListTile(
-              title: Text("Litecoin"),
-              subtitle: Text('Valor Atual'),
-              trailing: Text("R\$20.000"),
+            ListTile(
+              title: const Text("Litecoin"),
+              subtitle: const Text('Valor Atual'),
+              trailing: Text("R\$" + valorAtual.toString()),
             ),
-            const ListTile(
-              title: Text("Cap de mercado"),
-              trailing: Text("+0,2%"),
+            ListTile(
+              title: const Text("Cap de mercado"),
+              trailing: Text("+" + capMercado.toString() + "%"),
             ),
-            const ListTile(
-              title: Text("Valor mínimo"),
-              trailing: Text("R\$ 0,02"),
+            ListTile(
+              title: const Text("Valor mínimo"),
+              trailing: Text("R\$" + valorMin.toString()),
             ),
-            const ListTile(
-              title: Text("Valor máximo"),
-              trailing: Text("R\$ 0,47"),
+            ListTile(
+              title: const Text("Valor máximo"),
+              trailing: Text("R\$" + valorMax.toString()),
             ),
             ButtonTheme(
               minWidth: 350.0,

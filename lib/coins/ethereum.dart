@@ -10,11 +10,16 @@ class EthereumMain extends StatefulWidget {
 }
 
 class E5d extends State<EthereumMain> {
+  double valorAtual = 0.87;
+  double capMercado = 0.25;
+  double valorMin = 0.03;
+  double valorMax = 0.87;
+
   final List<Feature> features = [
     Feature(
       title: "Ethereum",
       color: Colors.pink,
-      data: [0.03, 0.40, 0.85, 1.20, 1],
+      data: [0.03, 0.80, 0.45, 0.36, 0.87],
     ),
   ];
 
@@ -59,7 +64,7 @@ class E5d extends State<EthereumMain> {
                 '0,25R\$',
                 '0,50R\$',
                 '1,00R\$',
-                '2,00R\$'
+                '1,50R\$'
               ],
               showDescription: false,
               graphColor: Colors.black87,
@@ -156,22 +161,22 @@ class E5d extends State<EthereumMain> {
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
             ),
-            const ListTile(
-              title: Text("Ethereum"),
-              subtitle: Text('Valor Atual'),
-              trailing: Text("R\$20.000"),
+            ListTile(
+              title: const Text("Ethereum"),
+              subtitle: const Text('Valor Atual'),
+              trailing: Text("R\$" + valorAtual.toString()),
             ),
-            const ListTile(
-              title: Text("Cap de mercado"),
-              trailing: Text("+0,2%"),
+            ListTile(
+              title: const Text("Cap de mercado"),
+              trailing: Text("+" + capMercado.toString() + "%"),
             ),
-            const ListTile(
-              title: Text("Valor mínimo"),
-              trailing: Text("R\$ 0,02"),
+            ListTile(
+              title: const Text("Valor mínimo"),
+              trailing: Text("R\$" + valorMin.toString()),
             ),
-            const ListTile(
-              title: Text("Valor máximo"),
-              trailing: Text("R\$ 0,47"),
+            ListTile(
+              title: const Text("Valor máximo"),
+              trailing: Text("R\$" + valorMax.toString()),
             ),
             ButtonTheme(
               minWidth: 350.0,
@@ -196,11 +201,16 @@ class Ethereum10d extends StatefulWidget {
 }
 
 class E10d extends State<Ethereum10d> {
+  double valorAtual = 0.9;
+  double capMercado = 0.58;
+  double valorMin = 0.36;
+  double valorMax = 0.70;
+
   final List<Feature> features = [
     Feature(
       title: "Ethereum",
       color: Colors.pink,
-      data: [0.30, 0.90, 0.80, 0.60, 0.45, 0.9],
+      data: [0.36, 0.70, 0.80, 0.60, 0.45, 0.70],
     ),
   ];
 
@@ -245,7 +255,7 @@ class E10d extends State<Ethereum10d> {
                 '0,25R\$',
                 '0,50R\$',
                 '1,00R\$',
-                '2,00R\$'
+                '1,50R\$'
               ],
               showDescription: false,
               graphColor: Colors.black87,
@@ -342,22 +352,22 @@ class E10d extends State<Ethereum10d> {
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
             ),
-            const ListTile(
-              title: Text("Ethereum"),
-              subtitle: Text('Valor Atual'),
-              trailing: Text("R\$20.000"),
+            ListTile(
+              title: const Text("Ethereum"),
+              subtitle: const Text('Valor Atual'),
+              trailing: Text("R\$" + valorAtual.toString()),
             ),
-            const ListTile(
-              title: Text("Cap de mercado"),
-              trailing: Text("+0,2%"),
+            ListTile(
+              title: const Text("Cap de mercado"),
+              trailing: Text("+" + capMercado.toString() + "%"),
             ),
-            const ListTile(
-              title: Text("Valor mínimo"),
-              trailing: Text("R\$ 0,02"),
+            ListTile(
+              title: const Text("Valor mínimo"),
+              trailing: Text("R\$" + valorMin.toString()),
             ),
-            const ListTile(
-              title: Text("Valor máximo"),
-              trailing: Text("R\$ 0,47"),
+            ListTile(
+              title: const Text("Valor máximo"),
+              trailing: Text("R\$" + valorMax.toString()),
             ),
             ButtonTheme(
               minWidth: 350.0,
@@ -382,11 +392,16 @@ class Ethereum15d extends StatefulWidget {
 }
 
 class E15d extends State<Ethereum15d> {
+  double valorAtual = 1.2;
+  double capMercado = 0.70;
+  double valorMin = 0.4;
+  double valorMax = 1.2;
+
   final List<Feature> features = [
     Feature(
       title: "Ethereum",
       color: Colors.pink,
-      data: [1, 0.7, 1.2, 0.8, 0.7, 0.6],
+      data: [1, 0.4, 1.2, 0.8, 0.7, 1.2],
     ),
   ];
 
@@ -431,7 +446,7 @@ class E15d extends State<Ethereum15d> {
                 '0,25R\$',
                 '0,50R\$',
                 '1,00R\$',
-                '2,00R\$'
+                '1,50R\$'
               ],
               showDescription: false,
               graphColor: Colors.black87,
@@ -528,22 +543,22 @@ class E15d extends State<Ethereum15d> {
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
             ),
-            const ListTile(
-              title: Text("Ethereum"),
-              subtitle: Text('Valor Atual'),
-              trailing: Text("R\$20.000"),
+            ListTile(
+              title: const Text("Ethereum"),
+              subtitle: const Text('Valor Atual'),
+              trailing: Text("R\$" + valorAtual.toString()),
             ),
-            const ListTile(
-              title: Text("Cap de mercado"),
-              trailing: Text("+0,2%"),
+            ListTile(
+              title: const Text("Cap de mercado"),
+              trailing: Text("+" + capMercado.toString() + "%"),
             ),
-            const ListTile(
-              title: Text("Valor mínimo"),
-              trailing: Text("R\$ 0,02"),
+            ListTile(
+              title: const Text("Valor mínimo"),
+              trailing: Text("R\$" + valorMin.toString()),
             ),
-            const ListTile(
-              title: Text("Valor máximo"),
-              trailing: Text("R\$ 0,47"),
+            ListTile(
+              title: const Text("Valor máximo"),
+              trailing: Text("R\$" + valorMax.toString()),
             ),
             ButtonTheme(
               minWidth: 350.0,
@@ -568,11 +583,16 @@ class Ethereum30d extends StatefulWidget {
 }
 
 class E30d extends State<Ethereum30d> {
+  double valorAtual = 0.86;
+  double capMercado = 0.38;
+  double valorMin = 0.5;
+  double valorMax = 1.1;
+
   final List<Feature> features = [
     Feature(
       title: "Ethereum",
       color: Colors.pink,
-      data: [0.7, 0.5, 0.8, 0.5, 1.1, 0.9],
+      data: [0.7, 0.5, 0.8, 0.5, 1.1, 0.86],
     ),
   ];
 
@@ -617,7 +637,7 @@ class E30d extends State<Ethereum30d> {
                 '0,25R\$',
                 '0,50R\$',
                 '1,00R\$',
-                '2,00R\$'
+                '1,50R\$'
               ],
               showDescription: false,
               graphColor: Colors.black87,
@@ -714,22 +734,22 @@ class E30d extends State<Ethereum30d> {
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
             ),
-            const ListTile(
-              title: Text("Ethereum"),
-              subtitle: Text('Valor Atual'),
-              trailing: Text("R\$20.000"),
+            ListTile(
+              title: const Text("Ethereum"),
+              subtitle: const Text('Valor Atual'),
+              trailing: Text("R\$" + valorAtual.toString()),
             ),
-            const ListTile(
-              title: Text("Cap de mercado"),
-              trailing: Text("+0,2%"),
+            ListTile(
+              title: const Text("Cap de mercado"),
+              trailing: Text("+" + capMercado.toString() + "%"),
             ),
-            const ListTile(
-              title: Text("Valor mínimo"),
-              trailing: Text("R\$ 0,02"),
+            ListTile(
+              title: const Text("Valor mínimo"),
+              trailing: Text("R\$" + valorMin.toString()),
             ),
-            const ListTile(
-              title: Text("Valor máximo"),
-              trailing: Text("R\$ 0,47"),
+            ListTile(
+              title: const Text("Valor máximo"),
+              trailing: Text("R\$" + valorMax.toString()),
             ),
             ButtonTheme(
               minWidth: 350.0,
@@ -754,11 +774,16 @@ class Ethereum50d extends StatefulWidget {
 }
 
 class E50d extends State<Ethereum50d> {
+  double valorAtual = 1;
+  double capMercado = 0.68;
+  double valorMin = 0.04;
+  double valorMax = 1;
+
   final List<Feature> features = [
     Feature(
       title: "Ethereum",
       color: Colors.pink,
-      data: [1, 0.9, 1.2, 0.7, 1.1, 1],
+      data: [0.04, 0.9, 0.8, 0.07, 1, 1],
     ),
   ];
 
@@ -803,7 +828,7 @@ class E50d extends State<Ethereum50d> {
                 '0,25R\$',
                 '0,50R\$',
                 '1,00R\$',
-                '2,00R\$'
+                '1,50R\$'
               ],
               showDescription: false,
               graphColor: Colors.black87,
@@ -900,22 +925,22 @@ class E50d extends State<Ethereum50d> {
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
             ),
-            const ListTile(
-              title: Text("Ethereum"),
-              subtitle: Text('Valor Atual'),
-              trailing: Text("R\$20.000"),
+            ListTile(
+              title: const Text("Ethereum"),
+              subtitle: const Text('Valor Atual'),
+              trailing: Text("R\$" + valorAtual.toString()),
             ),
-            const ListTile(
-              title: Text("Cap de mercado"),
-              trailing: Text("+0,2%"),
+            ListTile(
+              title: const Text("Cap de mercado"),
+              trailing: Text("+" + capMercado.toString() + "%"),
             ),
-            const ListTile(
-              title: Text("Valor mínimo"),
-              trailing: Text("R\$ 0,02"),
+            ListTile(
+              title: const Text("Valor mínimo"),
+              trailing: Text("R\$" + valorMin.toString()),
             ),
-            const ListTile(
-              title: Text("Valor máximo"),
-              trailing: Text("R\$ 0,47"),
+            ListTile(
+              title: const Text("Valor máximo"),
+              trailing: Text("R\$" + valorMax.toString()),
             ),
             ButtonTheme(
               minWidth: 350.0,
