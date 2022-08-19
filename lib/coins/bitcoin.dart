@@ -10,16 +10,16 @@ class BitcoinMain extends StatefulWidget {
 }
 
 class B5d extends State<BitcoinMain> {
-  double valorAtual = 0.87;
-  double capMercado = 0.25;
-  double valorMin = 0.03;
-  double valorMax = 0.87;
+  double valorAtual = 0.30;
+  double capMercado = 0.38;
+  double valorMin = 0.06;
+  double valorMax = 0.48;
 
   final List<Feature> features = [
     Feature(
       title: "Bitcoin",
       color: Colors.pink,
-      data: [0.03, 0.80, 0.45, 0.36, 0.87],
+      data: [0.09, 0.06, 0.48, 0.36, 0.30],
     ),
   ];
 
@@ -201,16 +201,16 @@ class Bitcoin10d extends StatefulWidget {
 }
 
 class B10d extends State<Bitcoin10d> {
-  double valorAtual = 0.9;
+  double valorAtual = 0.33;
   double capMercado = 0.58;
-  double valorMin = 0.36;
-  double valorMax = 0.70;
+  double valorMin = 0.25;
+  double valorMax = 0.56;
 
   final List<Feature> features = [
     Feature(
       title: "Bitcoin",
       color: Colors.pink,
-      data: [0.36, 0.70, 0.80, 0.60, 0.45, 0.70],
+      data: [0.26, 0.56, 0.50, 0.40, 0.25, 0.33],
     ),
   ];
 
@@ -392,16 +392,16 @@ class Bitcoin15d extends StatefulWidget {
 }
 
 class B15d extends State<Bitcoin15d> {
-  double valorAtual = 1.2;
+  double valorAtual = 1;
   double capMercado = 0.70;
-  double valorMin = 0.4;
-  double valorMax = 1.2;
+  double valorMin = 0.45;
+  double valorMax = 1;
 
   final List<Feature> features = [
     Feature(
       title: "Bitcoin",
       color: Colors.pink,
-      data: [1, 0.4, 1.2, 0.8, 0.7, 1.2],
+      data: [0.55, 0.45, 1, 0.8, 0.5, 1],
     ),
   ];
 
@@ -583,16 +583,16 @@ class Bitcoin30d extends StatefulWidget {
 }
 
 class B30d extends State<Bitcoin30d> {
-  double valorAtual = 0.86;
+  double valorAtual = 0.70;
   double capMercado = 0.38;
-  double valorMin = 0.5;
-  double valorMax = 1.1;
+  double valorMin = 0.33;
+  double valorMax = 0.87;
 
   final List<Feature> features = [
     Feature(
       title: "Bitcoin",
       color: Colors.pink,
-      data: [0.7, 0.5, 0.8, 0.5, 1.1, 0.86],
+      data: [0.55, 0.33, 0.42, 0.55, 0.87, 0.70],
     ),
   ];
 
@@ -774,16 +774,16 @@ class Bitcoin50d extends StatefulWidget {
 }
 
 class B50d extends State<Bitcoin50d> {
-  double valorAtual = 1;
+  double valorAtual = 0.5;
   double capMercado = 0.68;
-  double valorMin = 0.04;
-  double valorMax = 1;
+  double valorMin = 0.34;
+  double valorMax = 0.88;
 
   final List<Feature> features = [
     Feature(
       title: "Bitcoin",
       color: Colors.pink,
-      data: [0.04, 0.9, 0.8, 0.07, 1, 1],
+      data: [0.34, 0.44, 0.88, 0.77, 0.45, 0.5],
     ),
   ];
 
