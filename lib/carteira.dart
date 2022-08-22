@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class MyHomePageWidget extends StatefulWidget {
-  MyHomePageWidget({Key? key, required this.selectedCoin}) : super(key: key);
-  int selectedCoin;
+  const MyHomePageWidget({Key? key}) : super(key: key);
+
   @override
   State<MyHomePageWidget> createState() => MyHomePageState();
 }

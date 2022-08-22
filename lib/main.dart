@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myapp/coins/bitcoin.dart';
 import 'package:myapp/coins/ethereum.dart';
 import 'package:myapp/coins/litecoin.dart';
+import 'package:myapp/conversao.dart';
 import 'package:myapp/navbar.dart';
 
 void main() => runApp(const NavBar());
@@ -33,6 +34,7 @@ class NavBar extends StatelessWidget {
         '/litecoin15D': (context) => const Litecoin15d(),
         '/litecoin30D': (context) => const Litecoin30d(),
         '/litecoin50D': (context) => const Litecoin50d(),
+        '/conversao': (context) => const Conversao()
       },
     );
   }

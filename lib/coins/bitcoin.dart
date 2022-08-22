@@ -184,7 +184,9 @@ class B5d extends State<BitcoinMain> {
               child: RaisedButton(
                 color: Colors.pink,
                 textColor: Colors.white,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, "/conversao");
+                },
                 child: const Text("Converter moeda"),
               ),
             ),
@@ -375,7 +377,9 @@ class B10d extends State<Bitcoin10d> {
               child: RaisedButton(
                 color: Colors.pink,
                 textColor: Colors.white,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, "/conversao");
+                },
                 child: const Text("Converter moeda"),
               ),
             ),
@@ -566,7 +570,9 @@ class B15d extends State<Bitcoin15d> {
               child: RaisedButton(
                 color: Colors.pink,
                 textColor: Colors.white,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, "/conversao");
+                },
                 child: const Text("Converter moeda"),
               ),
             ),
@@ -757,7 +763,9 @@ class B30d extends State<Bitcoin30d> {
               child: RaisedButton(
                 color: Colors.pink,
                 textColor: Colors.white,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, "/conversao");
+                },
                 child: const Text("Converter moeda"),
               ),
             ),
@@ -948,7 +956,9 @@ class B50d extends State<Bitcoin50d> {
               child: RaisedButton(
                 color: Colors.pink,
                 textColor: Colors.white,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, "/conversao");
+                },
                 child: const Text("Converter moeda"),
               ),
             ),
