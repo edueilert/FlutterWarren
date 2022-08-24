@@ -1,8 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/controlers/home_controler.dart';
 
 // ignore: must_be_immutable
 class Conversao extends StatefulWidget {
-  const Conversao({Key? key}) : super(key: key);
+  Conversao({Key? key}) : super(key: key);
+
+  final TextEditingController toText = TextEditingController();
+  final TextEditingController fromText = TextEditingController();
+
+  HomeController homeController;
+
+  HomeView() {
+    homeController = HomeController(toText: toText, fromText: fromText);
+  }
 
   @override
   State<Conversao> createState() => Estrutura();
@@ -22,7 +32,7 @@ class Estrutura extends State<Conversao> {
               Align(
                 alignment: Alignment.bottomLeft,
                 child: Text(
-                  'Conversão de moeda',
+                  ' Conversão de moeda',
                   style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
                 ),
               ),
