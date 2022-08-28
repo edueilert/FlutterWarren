@@ -70,84 +70,63 @@ class E5d extends State<EthereumMain> {
               graphColor: Colors.black87,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  width: 70,
+                  width: 50,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereumMain");
                     },
-                    child: const Text(" 5D"),
-                  ),
-                ),
+                    child: const Text(' 5D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereum10D");
                     },
-                    child: const Text("10D"),
-                  ),
-                ),
+                    child: const Text('10D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereum15D");
                     },
-                    child: const Text("15D"),
-                  ),
-                ),
+                    child: const Text('15D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereum30D");
                     },
-                    child: const Text("30D"),
-                  ),
-                ),
+                    child: const Text('30D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(30, 10),
+                        maximumSize: const Size(60, 20),
+                        primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereum50D");
                     },
-                    child: const Text("50D"),
-                  ),
-                ),
+                    child: const Text('50D')),
                 const SizedBox(
-                  width: 20,
+                  width: 5,
                 ),
                 IconButton(
                     icon: const Icon(Icons.insert_chart_outlined),
@@ -263,84 +242,63 @@ class E10d extends State<Ethereum10d> {
               graphColor: Colors.black87,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  width: 70,
+                  width: 50,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereumMain");
                     },
-                    child: const Text(" 5D"),
-                  ),
-                ),
+                    child: const Text(' 5D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereum10D");
                     },
-                    child: const Text("10D"),
-                  ),
-                ),
+                    child: const Text('10D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereum15D");
                     },
-                    child: const Text("15D"),
-                  ),
-                ),
+                    child: const Text('15D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereum30D");
                     },
-                    child: const Text("30D"),
-                  ),
-                ),
+                    child: const Text('30D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(30, 10),
+                        maximumSize: const Size(60, 20),
+                        primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereum50D");
                     },
-                    child: const Text("50D"),
-                  ),
-                ),
+                    child: const Text('50D')),
                 const SizedBox(
-                  width: 20,
+                  width: 5,
                 ),
                 IconButton(
                     icon: const Icon(Icons.insert_chart_outlined),
@@ -456,84 +414,63 @@ class E15d extends State<Ethereum15d> {
               graphColor: Colors.black87,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  width: 70,
+                  width: 50,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereumMain");
                     },
-                    child: const Text(" 5D"),
-                  ),
-                ),
+                    child: const Text(' 5D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereum10D");
                     },
-                    child: const Text("10D"),
-                  ),
-                ),
+                    child: const Text('10D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereum15D");
                     },
-                    child: const Text("15D"),
-                  ),
-                ),
+                    child: const Text('15D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereum30D");
                     },
-                    child: const Text("30D"),
-                  ),
-                ),
+                    child: const Text('30D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(30, 10),
+                        maximumSize: const Size(60, 20),
+                        primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereum50D");
                     },
-                    child: const Text("50D"),
-                  ),
-                ),
+                    child: const Text('50D')),
                 const SizedBox(
-                  width: 20,
+                  width: 5,
                 ),
                 IconButton(
                     icon: const Icon(Icons.insert_chart_outlined),
@@ -649,84 +586,63 @@ class E30d extends State<Ethereum30d> {
               graphColor: Colors.black87,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  width: 70,
+                  width: 50,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereumMain");
                     },
-                    child: const Text(" 5D"),
-                  ),
-                ),
+                    child: const Text(' 5D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereum10D");
                     },
-                    child: const Text("10D"),
-                  ),
-                ),
+                    child: const Text('10D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereum15D");
                     },
-                    child: const Text("15D"),
-                  ),
-                ),
+                    child: const Text('15D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereum30D");
                     },
-                    child: const Text("30D"),
-                  ),
-                ),
+                    child: const Text('30D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(30, 10),
+                        maximumSize: const Size(60, 20),
+                        primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereum50D");
                     },
-                    child: const Text("50D"),
-                  ),
-                ),
+                    child: const Text('50D')),
                 const SizedBox(
-                  width: 20,
+                  width: 5,
                 ),
                 IconButton(
                     icon: const Icon(Icons.insert_chart_outlined),
@@ -842,84 +758,63 @@ class E50d extends State<Ethereum50d> {
               graphColor: Colors.black87,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  width: 70,
+                  width: 50,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereumMain");
                     },
-                    child: const Text(" 5D"),
-                  ),
-                ),
+                    child: const Text(' 5D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereum10D");
                     },
-                    child: const Text("10D"),
-                  ),
-                ),
+                    child: const Text('10D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereum15D");
                     },
-                    child: const Text("15D"),
-                  ),
-                ),
+                    child: const Text('15D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereum30D");
                     },
-                    child: const Text("30D"),
-                  ),
-                ),
+                    child: const Text('30D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(30, 10),
+                        maximumSize: const Size(60, 20),
+                        primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/ethereum50D");
                     },
-                    child: const Text("50D"),
-                  ),
-                ),
+                    child: const Text('50D')),
                 const SizedBox(
-                  width: 20,
+                  width: 5,
                 ),
                 IconButton(
                     icon: const Icon(Icons.insert_chart_outlined),

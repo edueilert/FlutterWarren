@@ -70,84 +70,63 @@ class B5d extends State<BitcoinMain> {
               graphColor: Colors.black87,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  width: 70,
+                  width: 50,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoinMain");
                     },
-                    child: const Text(" 5D"),
-                  ),
-                ),
+                    child: const Text(' 5D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoin10D");
                     },
-                    child: const Text("10D"),
-                  ),
-                ),
+                    child: const Text('10D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoin15D");
                     },
-                    child: const Text("15D"),
-                  ),
-                ),
+                    child: const Text('15D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoin30D");
                     },
-                    child: const Text("30D"),
-                  ),
-                ),
+                    child: const Text('30D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(30, 10),
+                        maximumSize: const Size(60, 20),
+                        primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoin50D");
                     },
-                    child: const Text("50D"),
-                  ),
-                ),
+                    child: const Text('50D')),
                 const SizedBox(
-                  width: 20,
+                  width: 5,
                 ),
                 IconButton(
                     icon: const Icon(Icons.insert_chart_outlined),
@@ -164,11 +143,11 @@ class B5d extends State<BitcoinMain> {
             ListTile(
               title: const Text("Bitcoin"),
               subtitle: const Text('Valor Atual'),
-              trailing: Text("R\$" + valorAtual.toString()),
+              trailing: Text("R\$ $valorAtual"),
             ),
             ListTile(
               title: const Text("Cap de mercado"),
-              trailing: Text("+" + capMercado.toString() + "%"),
+              trailing: Text("+ $capMercado%"),
             ),
             ListTile(
               title: const Text("Valor mínimo"),
@@ -263,84 +242,63 @@ class B10d extends State<Bitcoin10d> {
               graphColor: Colors.black87,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  width: 70,
+                  width: 50,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoinMain");
                     },
-                    child: const Text(" 5D"),
-                  ),
-                ),
+                    child: const Text(' 5D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoin10D");
                     },
-                    child: const Text("10D"),
-                  ),
-                ),
+                    child: const Text('10D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoin15D");
                     },
-                    child: const Text("15D"),
-                  ),
-                ),
+                    child: const Text('15D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoin30D");
                     },
-                    child: const Text("30D"),
-                  ),
-                ),
+                    child: const Text('30D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(30, 10),
+                        maximumSize: const Size(60, 20),
+                        primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoin50D");
                     },
-                    child: const Text("50D"),
-                  ),
-                ),
+                    child: const Text('50D')),
                 const SizedBox(
-                  width: 20,
+                  width: 5,
                 ),
                 IconButton(
                     icon: const Icon(Icons.insert_chart_outlined),
@@ -456,84 +414,63 @@ class B15d extends State<Bitcoin15d> {
               graphColor: Colors.black87,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  width: 70,
+                  width: 50,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoinMain");
                     },
-                    child: const Text(" 5D"),
-                  ),
-                ),
+                    child: const Text(' 5D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoin10D");
                     },
-                    child: const Text("10D"),
-                  ),
-                ),
+                    child: const Text('10D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoin15D");
                     },
-                    child: const Text("15D"),
-                  ),
-                ),
+                    child: const Text('15D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoin30D");
                     },
-                    child: const Text("30D"),
-                  ),
-                ),
+                    child: const Text('30D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(30, 10),
+                        maximumSize: const Size(60, 20),
+                        primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoin50D");
                     },
-                    child: const Text("50D"),
-                  ),
-                ),
+                    child: const Text('50D')),
                 const SizedBox(
-                  width: 20,
+                  width: 5,
                 ),
                 IconButton(
                     icon: const Icon(Icons.insert_chart_outlined),
@@ -649,84 +586,63 @@ class B30d extends State<Bitcoin30d> {
               graphColor: Colors.black87,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  width: 70,
+                  width: 50,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoinMain");
                     },
-                    child: const Text(" 5D"),
-                  ),
-                ),
+                    child: const Text(' 5D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoin10D");
                     },
-                    child: const Text("10D"),
-                  ),
-                ),
+                    child: const Text('10D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoin15D");
                     },
-                    child: const Text("15D"),
-                  ),
-                ),
+                    child: const Text('15D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoin30D");
                     },
-                    child: const Text("30D"),
-                  ),
-                ),
+                    child: const Text('30D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(30, 10),
+                        maximumSize: const Size(60, 20),
+                        primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoin50D");
                     },
-                    child: const Text("50D"),
-                  ),
-                ),
+                    child: const Text('50D')),
                 const SizedBox(
-                  width: 20,
+                  width: 5,
                 ),
                 IconButton(
                     icon: const Icon(Icons.insert_chart_outlined),
@@ -842,84 +758,63 @@ class B50d extends State<Bitcoin50d> {
               graphColor: Colors.black87,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  width: 70,
+                  width: 50,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoinMain");
                     },
-                    child: const Text(" 5D"),
-                  ),
-                ),
+                    child: const Text(' 5D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoin10D");
                     },
-                    child: const Text("10D"),
-                  ),
-                ),
+                    child: const Text('10D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoin15D");
                     },
-                    child: const Text("15D"),
-                  ),
-                ),
+                    child: const Text('15D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoin30D");
                     },
-                    child: const Text("30D"),
-                  ),
-                ),
+                    child: const Text('30D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(30, 10),
+                        maximumSize: const Size(60, 20),
+                        primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/bitcoin50D");
                     },
-                    child: const Text("50D"),
-                  ),
-                ),
+                    child: const Text('50D')),
                 const SizedBox(
-                  width: 20,
+                  width: 5,
                 ),
                 IconButton(
                     icon: const Icon(Icons.insert_chart_outlined),

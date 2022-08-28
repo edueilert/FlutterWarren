@@ -177,7 +177,7 @@ class MyHomePageState extends State<MyHomePageWidget> {
                   ]),
                   Visibility(
                     child: Text(
-                      "+" + vLTC.toString() + "%",
+                      "+ ${vLTC} %",
                       style: const TextStyle(
                         backgroundColor: Color.fromARGB(255, 250, 143, 143),
                       ),

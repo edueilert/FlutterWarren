@@ -72,84 +72,63 @@ class L5d extends State<LitecoinMain> {
               graphColor: Colors.black87,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  width: 70,
+                  width: 50,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoinMain");
                     },
-                    child: const Text(" 5D"),
-                  ),
-                ),
+                    child: const Text(' 5D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoin10D");
                     },
-                    child: const Text("10D"),
-                  ),
-                ),
+                    child: const Text('10D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoin15D");
                     },
-                    child: const Text("15D"),
-                  ),
-                ),
+                    child: const Text('15D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoin30D");
                     },
-                    child: const Text("30D"),
-                  ),
-                ),
+                    child: const Text('30D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(30, 10),
+                        maximumSize: const Size(60, 20),
+                        primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoin50D");
                     },
-                    child: const Text("50D"),
-                  ),
-                ),
+                    child: const Text('50D')),
                 const SizedBox(
-                  width: 20,
+                  width: 5,
                 ),
                 IconButton(
                     icon: const Icon(Icons.insert_chart_outlined),
@@ -265,84 +244,63 @@ class L10d extends State<Litecoin10d> {
               graphColor: Colors.black87,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  width: 70,
+                  width: 50,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoinMain");
                     },
-                    child: const Text(" 5D"),
-                  ),
-                ),
+                    child: const Text(' 5D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoin10D");
                     },
-                    child: const Text("10D"),
-                  ),
-                ),
+                    child: const Text('10D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoin15D");
                     },
-                    child: const Text("15D"),
-                  ),
-                ),
+                    child: const Text('15D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoin30D");
                     },
-                    child: const Text("30D"),
-                  ),
-                ),
+                    child: const Text('30D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(30, 10),
+                        maximumSize: const Size(60, 20),
+                        primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoin50D");
                     },
-                    child: const Text("50D"),
-                  ),
-                ),
+                    child: const Text('50D')),
                 const SizedBox(
-                  width: 20,
+                  width: 5,
                 ),
                 IconButton(
                     icon: const Icon(Icons.insert_chart_outlined),
@@ -458,84 +416,63 @@ class L15d extends State<Litecoin15d> {
               graphColor: Colors.black87,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  width: 70,
+                  width: 50,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoinMain");
                     },
-                    child: const Text(" 5D"),
-                  ),
-                ),
+                    child: const Text(' 5D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoin10D");
                     },
-                    child: const Text("10D"),
-                  ),
-                ),
+                    child: const Text('10D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoin15D");
                     },
-                    child: const Text("15D"),
-                  ),
-                ),
+                    child: const Text('15D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoin30D");
                     },
-                    child: const Text("30D"),
-                  ),
-                ),
+                    child: const Text('30D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(30, 10),
+                        maximumSize: const Size(60, 20),
+                        primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoin50D");
                     },
-                    child: const Text("50D"),
-                  ),
-                ),
+                    child: const Text('50D')),
                 const SizedBox(
-                  width: 20,
+                  width: 5,
                 ),
                 IconButton(
                     icon: const Icon(Icons.insert_chart_outlined),
@@ -651,84 +588,63 @@ class L30d extends State<Litecoin30d> {
               graphColor: Colors.black87,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  width: 70,
+                  width: 50,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoinMain");
                     },
-                    child: const Text(" 5D"),
-                  ),
-                ),
+                    child: const Text(' 5D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoin10D");
                     },
-                    child: const Text("10D"),
-                  ),
-                ),
+                    child: const Text('10D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoin15D");
                     },
-                    child: const Text("15D"),
-                  ),
-                ),
+                    child: const Text('15D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoin30D");
                     },
-                    child: const Text("30D"),
-                  ),
-                ),
+                    child: const Text('30D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(30, 10),
+                        maximumSize: const Size(60, 20),
+                        primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoin50D");
                     },
-                    child: const Text("50D"),
-                  ),
-                ),
+                    child: const Text('50D')),
                 const SizedBox(
-                  width: 20,
+                  width: 5,
                 ),
                 IconButton(
                     icon: const Icon(Icons.insert_chart_outlined),
@@ -843,84 +759,63 @@ class L50d extends State<Litecoin50d> {
               graphColor: Colors.black87,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  width: 70,
+                  width: 50,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoinMain");
                     },
-                    child: const Text(" 5D"),
-                  ),
-                ),
+                    child: const Text(' 5D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(10, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoin10D");
                     },
-                    child: const Text("10D"),
-                  ),
-                ),
+                    child: const Text('10D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoin15D");
                     },
-                    child: const Text("15D"),
-                  ),
-                ),
+                    child: const Text('15D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(35, 20), primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoin30D");
                     },
-                    child: const Text("30D"),
-                  ),
-                ),
+                    child: const Text('30D')),
                 const SizedBox(
-                  width: 15,
+                  width: 5,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(30, 10),
+                        maximumSize: const Size(60, 20),
+                        primary: Colors.pink),
                     onPressed: () {
                       Navigator.pushNamed(context, "/litecoin50D");
                     },
-                    child: const Text("50D"),
-                  ),
-                ),
+                    child: const Text('50D')),
                 const SizedBox(
-                  width: 20,
+                  width: 5,
                 ),
                 IconButton(
                     icon: const Icon(Icons.insert_chart_outlined),

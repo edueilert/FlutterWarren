@@ -1,25 +1,23 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
-import 'package:myapp/controlers/home_controler.dart';
 
 // ignore: must_be_immutable
 class Conversao extends StatefulWidget {
-  Conversao({Key? key}) : super(key: key);
-
-  final TextEditingController toText = TextEditingController();
-  final TextEditingController fromText = TextEditingController();
-
-  HomeController homeController;
-
-  HomeView() {
-    homeController = HomeController(toText: toText, fromText: fromText);
-  }
+  const Conversao({Key? key}) : super(key: key);
 
   @override
   State<Conversao> createState() => Estrutura();
 }
 
 class Estrutura extends State<Conversao> {
-  String dropdownValue = "Selecione uma moeda";
+  final dropValue = ValueNotifier("");
+  final dropOpcoes = ["Ethereum", "Litecoin", "Bitcoin"];
+  bool isVisible25 = false;
+  bool isVisible50 = false;
+  bool isVisible75 = false;
+  bool isVisible100 = false;
+  String value = "";
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -46,30 +44,15 @@ class Estrutura extends State<Conversao> {
             ),
           ),
           DropdownButton<String>(
-            value: dropdownValue,
-            icon: const Icon(Icons.arrow_drop_down),
-            elevation: 16,
-            style: const TextStyle(color: Colors.black),
-            underline: Container(
-              height: 1,
-              color: Colors.black,
-            ),
-            onChanged: (String? newValue) {
-              setState(() {
-                dropdownValue = newValue!;
-              });
-            },
-            items: <String>[
-              'Selecione uma moeda',
-              'Ethereum',
-              'Bitecoin',
-              'Litecoin'
-            ].map<DropdownMenuItem<String>>((String value) {
-              return DropdownMenuItem<String>(
-                value: value,
-                child: Text(value),
-              );
-            }).toList(),
+            hint: const Text("Selecione uma moeda"),
+            value: (value.isEmpty) ? null : value,
+            onChanged: (escolha) => dropValue.value = escolha.toString(),
+            items: dropOpcoes
+                .map((op) => DropdownMenuItem(
+                      value: op,
+                      child: Text(op),
+                    ))
+                .toList(),
           ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
@@ -88,9 +71,13 @@ class Estrutura extends State<Conversao> {
                   minWidth: 10.0,
                   height: 5.0,
                   child: RaisedButton(
-                    color: Colors.black,
+                    color: isVisible25 ? Colors.pink : Colors.black,
                     textColor: Colors.white,
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        isVisible25 = !isVisible25;
+                      });
+                    },
                     child: const Text("25%"),
                   ),
                 ),
@@ -101,9 +88,14 @@ class Estrutura extends State<Conversao> {
                   minWidth: 10.0,
                   height: 5.0,
                   child: RaisedButton(
-                    color: Colors.black,
+                    // ignore: unnecessary_null_comparison
+                    color: isVisible50 ? Colors.pink : Colors.black,
                     textColor: Colors.white,
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        isVisible50 = !isVisible50;
+                      });
+                    },
                     child: const Text("50%"),
                   ),
                 ),
@@ -114,9 +106,13 @@ class Estrutura extends State<Conversao> {
                   minWidth: 10.0,
                   height: 5.0,
                   child: RaisedButton(
-                    color: Colors.black,
+                    color: isVisible75 ? Colors.pink : Colors.black,
                     textColor: Colors.white,
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        isVisible75 = !isVisible75;
+                      });
+                    },
                     child: const Text("75%"),
                   ),
                 ),
@@ -127,9 +123,13 @@ class Estrutura extends State<Conversao> {
                   minWidth: 10.0,
                   height: 5.0,
                   child: RaisedButton(
-                    color: Colors.black,
+                    color: isVisible100 ? Colors.pink : Colors.black,
                     textColor: Colors.white,
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        isVisible100 = !isVisible100;
+                      });
+                    },
                     child: const Text("100%"),
                   ),
                 ),
@@ -140,32 +140,6 @@ class Estrutura extends State<Conversao> {
               '  Para receber em:',
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
-          ),
-          DropdownButton<String>(
-            value: dropdownValue,
-            icon: const Icon(Icons.arrow_drop_down),
-            elevation: 16,
-            style: const TextStyle(color: Colors.black),
-            underline: Container(
-              height: 1,
-              color: Colors.black,
-            ),
-            onChanged: (String? newValue) {
-              setState(() {
-                dropdownValue = newValue!;
-              });
-            },
-            items: <String>[
-              'Selecione uma moeda',
-              'Ethereum',
-              'Bitecoin',
-              'Litecoin'
-            ].map<DropdownMenuItem<String>>((String value) {
-              return DropdownMenuItem<String>(
-                value: value,
-                child: Text(value),
-              );
-            }).toList(),
           ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
@@ -186,7 +160,9 @@ class Estrutura extends State<Conversao> {
                 child: RaisedButton(
                   color: Colors.white,
                   textColor: Colors.black,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/ethereumMain");
+                  },
                   child: const Text("Cancelar"),
                 ),
               ),
