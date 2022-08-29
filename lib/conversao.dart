@@ -11,13 +11,13 @@ class Conversao extends StatefulWidget {
 }
 
 class Estrutura extends State<Conversao> {
-  final dropValue = ValueNotifier("");
-  final dropOpcoes = ["Ethereum", "Litecoin", "Bitcoin"];
+  List<String> items = ["Ethereum", "Litecoin", "Bitcoin"];
+  String? selectedItem = "Ethereum";
+
   bool isVisible25 = false;
   bool isVisible50 = false;
   bool isVisible75 = false;
   bool isVisible100 = false;
-  String value = "";
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -43,22 +43,30 @@ class Estrutura extends State<Conversao> {
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
           ),
-          DropdownButton<String>(
-            hint: const Text("Selecione uma moeda"),
-            value: (value.isEmpty) ? null : value,
-            onChanged: (escolha) => dropValue.value = escolha.toString(),
-            items: dropOpcoes
-                .map((op) => DropdownMenuItem(
-                      value: op,
-                      child: Text(op),
-                    ))
-                .toList(),
+          SizedBox(
+            width: 375,
+            child: DropdownButtonFormField(
+              decoration: InputDecoration(
+                enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: const BorderSide(width: 2, color: Colors.pink)),
+              ),
+              value: selectedItem,
+              items: items
+                  .map((item) =>
+                      DropdownMenuItem<String>(value: item, child: Text(item)))
+                  .toList(),
+              onChanged: (item) =>
+                  setState(() => selectedItem = item as String?),
+            ),
           ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
             child: TextField(
               decoration: InputDecoration(
-                border: OutlineInputBorder(),
+                enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: const BorderSide(width: 2, color: Colors.pink)),
                 hintText: 'Montante a ser convertido',
               ),
             ),
@@ -124,11 +132,30 @@ class Estrutura extends State<Conversao> {
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+          SizedBox(
+            width: 375,
+            child: DropdownButtonFormField(
+              decoration: InputDecoration(
+                enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: const BorderSide(width: 2, color: Colors.pink)),
+              ),
+              value: selectedItem,
+              items: items
+                  .map((item) =>
+                      DropdownMenuItem<String>(value: item, child: Text(item)))
+                  .toList(),
+              onChanged: (item) =>
+                  setState(() => selectedItem = item as String?),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
             child: TextField(
               decoration: InputDecoration(
-                border: OutlineInputBorder(),
+                enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: const BorderSide(width: 2, color: Colors.pink)),
                 hintText: 'Montante a ser convertido',
               ),
             ),
