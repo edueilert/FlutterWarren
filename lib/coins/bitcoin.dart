@@ -151,24 +151,19 @@ class B5d extends State<BitcoinMain> {
             ),
             ListTile(
               title: const Text("Valor mínimo"),
-              trailing: Text("R\$" + valorMin.toString()),
+              trailing: Text("R\$ $valorMin"),
             ),
             ListTile(
               title: const Text("Valor máximo"),
-              trailing: Text("R\$" + valorMax.toString()),
+              trailing: Text("R\$ $valorMax"),
             ),
-            ButtonTheme(
-              minWidth: 350.0,
-              height: 50.0,
-              child: RaisedButton(
-                color: Colors.pink,
-                textColor: Colors.white,
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(400, 50), primary: Colors.pink),
                 onPressed: () {
                   Navigator.pushNamed(context, "/conversao");
                 },
-                child: const Text("Converter moeda"),
-              ),
-            ),
+                child: const Text(' Converter Moeda')),
           ],
         ),
       );
@@ -315,32 +310,27 @@ class B10d extends State<Bitcoin10d> {
             ListTile(
               title: const Text("Bitcoin"),
               subtitle: const Text('Valor Atual'),
-              trailing: Text("R\$" + valorAtual.toString()),
+              trailing: Text("R\$ $valorAtual"),
             ),
             ListTile(
               title: const Text("Cap de mercado"),
-              trailing: Text("+" + capMercado.toString() + "%"),
+              trailing: Text("+ $capMercado%"),
             ),
             ListTile(
               title: const Text("Valor mínimo"),
-              trailing: Text("R\$" + valorMin.toString()),
+              trailing: Text("R\$ $valorMin"),
             ),
             ListTile(
               title: const Text("Valor máximo"),
-              trailing: Text("R\$" + valorMax.toString()),
+              trailing: Text("R\$ $valorMax"),
             ),
-            ButtonTheme(
-              minWidth: 350.0,
-              height: 50.0,
-              child: RaisedButton(
-                color: Colors.pink,
-                textColor: Colors.white,
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(400, 50), primary: Colors.pink),
                 onPressed: () {
                   Navigator.pushNamed(context, "/conversao");
                 },
-                child: const Text("Converter moeda"),
-              ),
-            ),
+                child: const Text(' Converter Moeda')),
           ],
         ),
       );
@@ -487,32 +477,27 @@ class B15d extends State<Bitcoin15d> {
             ListTile(
               title: const Text("Bitcoin"),
               subtitle: const Text('Valor Atual'),
-              trailing: Text("R\$" + valorAtual.toString()),
+              trailing: Text("R\$ $valorAtual"),
             ),
             ListTile(
               title: const Text("Cap de mercado"),
-              trailing: Text("+" + capMercado.toString() + "%"),
+              trailing: Text("+ $capMercado%"),
             ),
             ListTile(
               title: const Text("Valor mínimo"),
-              trailing: Text("R\$" + valorMin.toString()),
+              trailing: Text("R\$ $valorMin"),
             ),
             ListTile(
               title: const Text("Valor máximo"),
-              trailing: Text("R\$" + valorMax.toString()),
+              trailing: Text("R\$ $valorMax"),
             ),
-            ButtonTheme(
-              minWidth: 350.0,
-              height: 50.0,
-              child: RaisedButton(
-                color: Colors.pink,
-                textColor: Colors.white,
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(400, 50), primary: Colors.pink),
                 onPressed: () {
                   Navigator.pushNamed(context, "/conversao");
                 },
-                child: const Text("Converter moeda"),
-              ),
-            ),
+                child: const Text(' Converter Moeda')),
           ],
         ),
       );
@@ -659,32 +644,27 @@ class B30d extends State<Bitcoin30d> {
             ListTile(
               title: const Text("Bitcoin"),
               subtitle: const Text('Valor Atual'),
-              trailing: Text("R\$" + valorAtual.toString()),
+              trailing: Text("R\$ $valorAtual"),
             ),
             ListTile(
               title: const Text("Cap de mercado"),
-              trailing: Text("+" + capMercado.toString() + "%"),
+              trailing: Text("+ $capMercado%"),
             ),
             ListTile(
               title: const Text("Valor mínimo"),
-              trailing: Text("R\$" + valorMin.toString()),
+              trailing: Text("R\$ $valorMin"),
             ),
             ListTile(
               title: const Text("Valor máximo"),
-              trailing: Text("R\$" + valorMax.toString()),
+              trailing: Text("R\$ $valorMax"),
             ),
-            ButtonTheme(
-              minWidth: 350.0,
-              height: 50.0,
-              child: RaisedButton(
-                color: Colors.pink,
-                textColor: Colors.white,
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(400, 50), primary: Colors.pink),
                 onPressed: () {
                   Navigator.pushNamed(context, "/conversao");
                 },
-                child: const Text("Converter moeda"),
-              ),
-            ),
+                child: const Text(' Converter Moeda')),
           ],
         ),
       );
@@ -831,32 +811,27 @@ class B50d extends State<Bitcoin50d> {
             ListTile(
               title: const Text("Bitcoin"),
               subtitle: const Text('Valor Atual'),
-              trailing: Text("R\$" + valorAtual.toString()),
+              trailing: Text("R\$ $valorAtual"),
             ),
             ListTile(
               title: const Text("Cap de mercado"),
-              trailing: Text("+" + capMercado.toString() + "%"),
+              trailing: Text("+ $capMercado%"),
             ),
             ListTile(
               title: const Text("Valor mínimo"),
-              trailing: Text("R\$" + valorMin.toString()),
+              trailing: Text("R\$ $valorMin"),
             ),
             ListTile(
               title: const Text("Valor máximo"),
-              trailing: Text("R\$" + valorMax.toString()),
+              trailing: Text("R\$ $valorMax"),
             ),
-            ButtonTheme(
-              minWidth: 350.0,
-              height: 50.0,
-              child: RaisedButton(
-                color: Colors.pink,
-                textColor: Colors.white,
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(400, 50), primary: Colors.pink),
                 onPressed: () {
                   Navigator.pushNamed(context, "/conversao");
                 },
-                child: const Text("Converter moeda"),
-              ),
-            ),
+                child: const Text(' Converter Moeda')),
           ],
         ),
       );

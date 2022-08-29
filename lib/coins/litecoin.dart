@@ -145,32 +145,27 @@ class L5d extends State<LitecoinMain> {
             ListTile(
               title: const Text("Litecoin"),
               subtitle: const Text('Valor Atual'),
-              trailing: Text("R\$" + valorAtual.toString()),
+              trailing: Text("R\$ $valorAtual"),
             ),
             ListTile(
               title: const Text("Cap de mercado"),
-              trailing: Text("+" + capMercado.toString() + "%"),
+              trailing: Text("+ $capMercado%"),
             ),
             ListTile(
               title: const Text("Valor mínimo"),
-              trailing: Text("R\$" + valorMin.toString()),
+              trailing: Text("R\$ $valorMin"),
             ),
             ListTile(
               title: const Text("Valor máximo"),
-              trailing: Text("R\$" + valorMax.toString()),
+              trailing: Text("R\$ $valorMax"),
             ),
-            ButtonTheme(
-              minWidth: 350.0,
-              height: 50.0,
-              child: RaisedButton(
-                color: Colors.pink,
-                textColor: Colors.white,
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(400, 50), primary: Colors.pink),
                 onPressed: () {
                   Navigator.pushNamed(context, "/conversao");
                 },
-                child: const Text("Converter moeda"),
-              ),
-            ),
+                child: const Text(' Converter Moeda')),
           ],
         ),
       );
@@ -317,32 +312,27 @@ class L10d extends State<Litecoin10d> {
             ListTile(
               title: const Text("Litecoin"),
               subtitle: const Text('Valor Atual'),
-              trailing: Text("R\$" + valorAtual.toString()),
+              trailing: Text("R\$ $valorAtual"),
             ),
             ListTile(
               title: const Text("Cap de mercado"),
-              trailing: Text("+" + capMercado.toString() + "%"),
+              trailing: Text("+ $capMercado%"),
             ),
             ListTile(
               title: const Text("Valor mínimo"),
-              trailing: Text("R\$" + valorMin.toString()),
+              trailing: Text("R\$ $valorMin"),
             ),
             ListTile(
               title: const Text("Valor máximo"),
-              trailing: Text("R\$" + valorMax.toString()),
+              trailing: Text("R\$ $valorMax"),
             ),
-            ButtonTheme(
-              minWidth: 350.0,
-              height: 50.0,
-              child: RaisedButton(
-                color: Colors.pink,
-                textColor: Colors.white,
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(400, 50), primary: Colors.pink),
                 onPressed: () {
                   Navigator.pushNamed(context, "/conversao");
                 },
-                child: const Text("Converter moeda"),
-              ),
-            ),
+                child: const Text(' Converter Moeda')),
           ],
         ),
       );
@@ -489,32 +479,27 @@ class L15d extends State<Litecoin15d> {
             ListTile(
               title: const Text("Litecoin"),
               subtitle: const Text('Valor Atual'),
-              trailing: Text("R\$" + valorAtual.toString()),
+              trailing: Text("R\$ $valorAtual"),
             ),
             ListTile(
               title: const Text("Cap de mercado"),
-              trailing: Text("+" + capMercado.toString() + "%"),
+              trailing: Text("+ $capMercado%"),
             ),
             ListTile(
               title: const Text("Valor mínimo"),
-              trailing: Text("R\$" + valorMin.toString()),
+              trailing: Text("R\$ $valorMin"),
             ),
             ListTile(
               title: const Text("Valor máximo"),
-              trailing: Text("R\$" + valorMax.toString()),
+              trailing: Text("R\$ $valorMax"),
             ),
-            ButtonTheme(
-              minWidth: 350.0,
-              height: 50.0,
-              child: RaisedButton(
-                color: Colors.pink,
-                textColor: Colors.white,
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(400, 50), primary: Colors.pink),
                 onPressed: () {
                   Navigator.pushNamed(context, "/conversao");
                 },
-                child: const Text("Converter moeda"),
-              ),
-            ),
+                child: const Text(' Converter Moeda')),
           ],
         ),
       );
@@ -661,32 +646,27 @@ class L30d extends State<Litecoin30d> {
             ListTile(
               title: const Text("Litecoin"),
               subtitle: const Text('Valor Atual'),
-              trailing: Text("R\$" + valorAtual.toString()),
+              trailing: Text("R\$ $valorAtual"),
             ),
             ListTile(
               title: const Text("Cap de mercado"),
-              trailing: Text("+" + capMercado.toString() + "%"),
+              trailing: Text("+ $capMercado%"),
             ),
             ListTile(
               title: const Text("Valor mínimo"),
-              trailing: Text("R\$" + valorMin.toString()),
+              trailing: Text("R\$ $valorMin"),
             ),
             ListTile(
               title: const Text("Valor máximo"),
-              trailing: Text("R\$" + valorMax.toString()),
+              trailing: Text("R\$ $valorMax"),
             ),
-            ButtonTheme(
-              minWidth: 350.0,
-              height: 50.0,
-              child: RaisedButton(
-                color: Colors.pink,
-                textColor: Colors.white,
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(400, 50), primary: Colors.pink),
                 onPressed: () {
                   Navigator.pushNamed(context, "/conversao");
                 },
-                child: const Text("Converter moeda"),
-              ),
-            ),
+                child: const Text(' Converter Moeda')),
           ],
         ),
       );
@@ -832,32 +812,27 @@ class L50d extends State<Litecoin50d> {
             ListTile(
               title: const Text("Litecoin"),
               subtitle: const Text('Valor Atual'),
-              trailing: Text("R\$" + valorAtual.toString()),
+              trailing: Text("R\$ $valorAtual"),
             ),
             ListTile(
               title: const Text("Cap de mercado"),
-              trailing: Text("+" + capMercado.toString() + "%"),
+              trailing: Text("+ $capMercado%"),
             ),
             ListTile(
               title: const Text("Valor mínimo"),
-              trailing: Text("R\$" + valorMin.toString()),
+              trailing: Text("R\$ $valorMin"),
             ),
             ListTile(
               title: const Text("Valor máximo"),
-              trailing: Text("R\$" + valorMax.toString()),
+              trailing: Text("R\$ $valorMax"),
             ),
-            ButtonTheme(
-              minWidth: 350.0,
-              height: 50.0,
-              child: RaisedButton(
-                color: Colors.pink,
-                textColor: Colors.white,
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(400, 50), primary: Colors.pink),
                 onPressed: () {
                   Navigator.pushNamed(context, "/conversao");
                 },
-                child: const Text("Converter moeda"),
-              ),
-            ),
+                child: const Text(' Converter Moeda')),
           ],
         ),
       );

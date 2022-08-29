@@ -67,72 +67,55 @@ class Estrutura extends State<Conversao> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: isVisible25 ? Colors.pink : Colors.black,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(0, 20),
+                        primary: isVisible25 ? Colors.pink : Colors.black),
                     onPressed: () {
                       setState(() {
                         isVisible25 = !isVisible25;
                       });
                     },
-                    child: const Text("25%"),
-                  ),
-                ),
+                    child: const Text('25%')),
                 const SizedBox(
                   width: 15,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    // ignore: unnecessary_null_comparison
-                    color: isVisible50 ? Colors.pink : Colors.black,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(0, 20),
+                        primary: isVisible50 ? Colors.pink : Colors.black),
                     onPressed: () {
                       setState(() {
                         isVisible50 = !isVisible50;
                       });
                     },
-                    child: const Text("50%"),
-                  ),
-                ),
+                    child: const Text('50%')),
                 const SizedBox(
                   width: 15,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: isVisible75 ? Colors.pink : Colors.black,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(0, 20),
+                        primary: isVisible75 ? Colors.pink : Colors.black),
                     onPressed: () {
                       setState(() {
                         isVisible75 = !isVisible75;
                       });
                     },
-                    child: const Text("75%"),
-                  ),
-                ),
+                    child: const Text('75%')),
                 const SizedBox(
                   width: 15,
                 ),
-                ButtonTheme(
-                  minWidth: 10.0,
-                  height: 5.0,
-                  child: RaisedButton(
-                    color: isVisible100 ? Colors.pink : Colors.black,
-                    textColor: Colors.white,
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(0, 20),
+                        primary: isVisible100 ? Colors.pink : Colors.black),
                     onPressed: () {
                       setState(() {
                         isVisible100 = !isVisible100;
                       });
                     },
-                    child: const Text("100%"),
-                  ),
-                ),
+                    child: const Text('100%')),
               ]),
           const Align(
             alignment: Alignment.bottomLeft,
