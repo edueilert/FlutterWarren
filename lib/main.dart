@@ -34,7 +34,7 @@ class NavBar extends StatelessWidget {
         '/litecoin15D': (context) => const Litecoin15d(),
         '/litecoin30D': (context) => const Litecoin30d(),
         '/litecoin50D': (context) => const Litecoin50d(),
-        '/conversao': (context) => const Conversao()
+        '/conversao': (context) => Conversao()
       },
     );
   }

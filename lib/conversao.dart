@@ -1,10 +1,20 @@
-// ignore_for_file: deprecated_member_use
+// ignore_for_file: deprecated_member_use, constant_identifier_names, avoid_print, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
+import 'package:myapp/controlers/home_controler.dart';
 
 // ignore: must_be_immutable
 class Conversao extends StatefulWidget {
-  const Conversao({Key? key}) : super(key: key);
+  final TextEditingController toText = TextEditingController();
+  final TextEditingController fromText = TextEditingController();
+  final data = ListaCrypto.values;
+  late HomeController homeController;
+  String valor = "";
+  String valor2 = "";
+
+  Conversao({Key? key}) : super(key: key) {
+    homeController = HomeController(toText: toText, fromText: fromText);
+  }
 
   @override
   State<Conversao> createState() => Estrutura();
@@ -12,12 +22,14 @@ class Conversao extends StatefulWidget {
 
 class Estrutura extends State<Conversao> {
   List<String> items = ["Ethereum", "Litecoin", "Bitcoin"];
-  String? selectedItem = "Ethereum";
-
+  String? selectedItem;
   bool isVisible25 = false;
   bool isVisible50 = false;
   bool isVisible75 = false;
   bool isVisible100 = false;
+
+  var valor;
+  var valor2;
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -46,23 +58,30 @@ class Estrutura extends State<Conversao> {
           SizedBox(
             width: 375,
             child: DropdownButtonFormField(
-              decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide: const BorderSide(width: 2, color: Colors.pink)),
-              ),
-              value: selectedItem,
-              items: items
-                  .map((item) =>
-                      DropdownMenuItem<String>(value: item, child: Text(item)))
-                  .toList(),
-              onChanged: (item) =>
-                  setState(() => selectedItem = item as String?),
-            ),
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide:
+                          const BorderSide(width: 2, color: Colors.pink)),
+                ),
+                hint: const Text("Selecione sua moeda"),
+                items: widget.data.map((item) {
+                  return DropdownMenuItem(
+                      value: item.name, child: Text(item.name));
+                }).toList(),
+                onChanged: (String? newValue) {
+                  setState(() {
+                    selectedItem = newValue!;
+                  });
+                }),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
             child: TextField(
+              onChanged: (totext) {
+                valor = totext;
+                print("Primeira Moeda: $totext");
+              },
               decoration: InputDecoration(
                 enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
@@ -70,6 +89,9 @@ class Estrutura extends State<Conversao> {
                 hintText: 'Montante a ser convertido',
               ),
             ),
+          ),
+          const SizedBox(
+            height: 25,
           ),
           Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -125,6 +147,9 @@ class Estrutura extends State<Conversao> {
                     },
                     child: const Text('100%')),
               ]),
+          const SizedBox(
+            height: 25,
+          ),
           const Align(
             alignment: Alignment.bottomLeft,
             child: Text(
@@ -135,23 +160,29 @@ class Estrutura extends State<Conversao> {
           SizedBox(
             width: 375,
             child: DropdownButtonFormField(
-              decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide: const BorderSide(width: 2, color: Colors.pink)),
-              ),
-              value: selectedItem,
-              items: items
-                  .map((item) =>
-                      DropdownMenuItem<String>(value: item, child: Text(item)))
-                  .toList(),
-              onChanged: (item) =>
-                  setState(() => selectedItem = item as String?),
-            ),
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide:
+                          const BorderSide(width: 2, color: Colors.pink)),
+                ),
+                hint: const Text("Selecione sua moeda"),
+                items: widget.data.map((item) {
+                  return DropdownMenuItem(
+                      value: item.name, child: Text(item.name));
+                }).toList(),
+                onChanged: (String? newValue) {
+                  setState(() {
+                    selectedItem = newValue!;
+                  });
+                }),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
             child: TextField(
+              onChanged: (fromtext) {
+                valor2 = fromtext;
+              },
               decoration: InputDecoration(
                 enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
@@ -164,33 +195,37 @@ class Estrutura extends State<Conversao> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              ButtonTheme(
-                minWidth: 100.0,
-                height: 50.0,
-                child: RaisedButton(
-                  color: Colors.white,
-                  textColor: Colors.black,
+              ElevatedButton(
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.white),
+                      foregroundColor: MaterialStateProperty.all(Colors.pink),
+                      padding:
+                          MaterialStateProperty.all(const EdgeInsets.all(20)),
+                      textStyle: MaterialStateProperty.all(
+                          const TextStyle(fontSize: 18))),
                   onPressed: () {
-                    Navigator.pushNamed(context, "/ethereumMain");
+                    setState(() {});
                   },
-                  child: const Text("Cancelar"),
-                ),
-              ),
+                  child: const Text('Cancelar')),
               const SizedBox(
                 width: 15,
               ),
-              ButtonTheme(
-                minWidth: 100.0,
-                height: 50.0,
-                child: RaisedButton(
-                  color: Colors.pink,
-                  textColor: Colors.white,
-                  onPressed: () {},
-                  child: const Text("Confirmar"),
-                ),
-              ),
+              ElevatedButton(
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.pink),
+                      foregroundColor: MaterialStateProperty.all(Colors.white),
+                      padding:
+                          MaterialStateProperty.all(const EdgeInsets.all(20)),
+                      textStyle: MaterialStateProperty.all(
+                          const TextStyle(fontSize: 18))),
+                  onPressed: () {
+                    setState(() {});
+                  },
+                  child: const Text('Confirmar')),
             ],
           ),
         ]),
       );
 }
+
+enum ListaCrypto { Bitcoin, Litecoin, Ethereum }
