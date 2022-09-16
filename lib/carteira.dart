@@ -98,7 +98,7 @@ class MyHomePageState extends State<MyHomePageWidget> {
                     const Text('R\$ '),
                     Visibility(
                       child: Text(
-                        eth.toStringAsFixed(2) + "%",
+                        eth.toStringAsFixed(2),
                       ),
                       visible: isVisible,
                     ),
@@ -119,7 +119,7 @@ class MyHomePageState extends State<MyHomePageWidget> {
         ),
         InkWell(
           onTap: () {
-            Navigator.pushNamed(context, "/bitcoinMain");
+            Navigator.pushNamed(context, "/bitcoin5dias");
           },
           child: ListTile(
             title: const Text('BTC'),
@@ -134,7 +134,7 @@ class MyHomePageState extends State<MyHomePageWidget> {
                     const Text('R\$ '),
                     Visibility(
                       child: Text(
-                        btc.toStringAsFixed(2) + "%",
+                        btc.toStringAsFixed(2),
                       ),
                       visible: isVisible,
                     ),
@@ -170,14 +170,14 @@ class MyHomePageState extends State<MyHomePageWidget> {
                     const Text('R\$ '),
                     Visibility(
                       child: Text(
-                        ltc.toStringAsFixed(2) + "%",
+                        ltc.toStringAsFixed(2),
                       ),
                       visible: isVisible,
                     ),
                   ]),
                   Visibility(
                     child: Text(
-                      "+ ${vLTC} %",
+                      "+ $vLTC %",
                       style: const TextStyle(
                         backgroundColor: Color.fromARGB(255, 250, 143, 143),
                       ),

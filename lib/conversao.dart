@@ -8,13 +8,10 @@ class Conversao extends StatefulWidget {
   final TextEditingController toText = TextEditingController();
   final TextEditingController fromText = TextEditingController();
   final data = ListaCrypto.values;
-  late HomeController homeController;
   String valor = "";
   String valor2 = "";
 
-  Conversao({Key? key}) : super(key: key) {
-    homeController = HomeController(toText: toText, fromText: fromText);
-  }
+  Conversao({Key? key}) : super(key: key) {}
 
   @override
   State<Conversao> createState() => Estrutura();

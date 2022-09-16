@@ -4,6 +4,7 @@ import 'package:myapp/coins/ethereum.dart';
 import 'package:myapp/coins/litecoin.dart';
 import 'package:myapp/conversao.dart';
 import 'package:myapp/navbar.dart';
+import '../models/infos.dart';
 
 void main() => runApp(const NavBar());
 
@@ -24,7 +25,7 @@ class NavBar extends StatelessWidget {
         '/ethereum15D': (context) => const Ethereum15d(),
         '/ethereum30D': (context) => const Ethereum30d(),
         '/ethereum50D': (context) => const Ethereum50d(),
-        '/bitcoinMain': (context) => const BitcoinMain(),
+        '/bitcoin5dias': (context) => const Dias(),
         '/bitcoin10D': (context) => const Bitcoin10d(),
         '/bitcoin15D': (context) => const Bitcoin15d(),
         '/bitcoin30D': (context) => const Bitcoin30d(),
